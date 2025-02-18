@@ -24,6 +24,12 @@ nav {
   margin: 0;
 }
 
+.navigation-pages {
+    display: flex;  /* Enables flexbox */
+    justify-content: center; /* Centers the items horizontally */
+    width: 100%;
+  }
+
 .navigation-user-options {
   /* Pushes options to the right */
   margin-left: auto;
