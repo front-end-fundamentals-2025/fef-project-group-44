@@ -1,18 +1,47 @@
 /* Home page */
+:root {
+  --navigation-color: #220806;
+  /*+headings color, primary for text etc*/
+  --primary-font: "Poppins", serif;
+}
+
 header {
   display: flex;
   align-items: center;
 
   /* Elements spread across */
   justify-content: space-between;
+  padding: 0px 15px;
+}
 
-  padding: 10px 20px;
+/* Logo */
+
+#logo-container {
+  display: flex;
+  align-items: start;
+}
+
+#logo {
+  font-family: "Kaushan Script", serif;
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #c86460;
+  line-height: 1.1;
+}
+
+#logo-img {
+  width: 4%;
 }
 
 nav {
   display: flex;
   align-items: center;
   width: 100%;
+
+  color: var(--navigation-color);
+  font-family: var(--primary-font);
+  font-weight: 500;
 }
 
 .navigation-pages,
@@ -25,29 +54,36 @@ nav {
 }
 
 .navigation-pages {
-    display: flex;  /* Enables flexbox */
-    justify-content: center; /* Centers the items horizontally */
-    width: 100%;
-  }
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers the items horizontally */
+  width: 100%;
+}
 
 .navigation-user-options {
   /* Pushes options to the right */
   margin-left: auto;
 }
 
+nav a {
+  color: var(--navigation-color);
+}
+
 a {
+  font-family: var(--primary-font);
   text-decoration: none;
 }
 
-.products-img {
+#main-img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 100%;
+  margin: 0;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
   list-style: none;
+
+  font-weight: 500;
+  font-size: 0.7rem;
 }
