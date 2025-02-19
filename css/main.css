@@ -11,27 +11,25 @@ header {
 
   /* Elements spread across */
   justify-content: space-between;
-  padding: 0px 15px;
+  padding: 5px 15px;
 }
 
 /* Logo */
 
-#logo-container {
-  display: flex;
-  align-items: start;
-}
-
-#logo {
+.logo-name {
   font-family: "Kaushan Script", serif;
   font-style: normal;
   font-size: 2rem;
   font-weight: 600;
   color: #c86460;
+
   line-height: 1.1;
 }
 
 #logo-img {
   width: 4%;
+  display: flex;
+  align-items: start;
 }
 
 nav {
