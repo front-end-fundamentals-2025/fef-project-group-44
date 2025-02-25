@@ -69,6 +69,8 @@ nav a {
 a {
   font-family: var(--primary-font);
   text-decoration: none;
+  color: var(--navigation-color);
+  font-weight: 500;
 }
 
 #main-img {
@@ -111,7 +113,7 @@ figure {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  padding: 70px 0;
   box-sizing: border-box;
   list-style: none;
 
@@ -123,7 +125,7 @@ footer {
   background: #fea1a6;
   width: 100%;
   bottom: 0;
-  color: black;
+  color: var(--navigation-color);
   padding: 100px 0 30px;
   font-size: 13px;
   line-height: 20px;
@@ -138,10 +140,16 @@ footer {
   justify-content: space-between;
 }
 
-.col {
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-col {
   padding: 0;
   margin-bottom: 4rem;
   align-items: start;
+  padding: 0 15px;
 }
 
 .logo-footer {
@@ -149,5 +157,18 @@ footer {
   font-style: normal;
   font-size: 2rem;
   font-weight: 600;
-  color: #220806;
+  color: var(--navigation-color);
+}
+
+.details {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  line-height: 0.8;
+  color: var(--navigation-color);
+}
+
+h4 {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  color: var(--navigation-color);
 }
