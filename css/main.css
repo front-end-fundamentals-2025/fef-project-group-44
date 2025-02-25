@@ -77,6 +77,31 @@ a {
   margin: 0;
 }
 
+
+figure {
+  margin: 5.5rem 1rem 5.5rem 3rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 520px) {
+  .product-section-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;  
+  }
+}
+
+.product-section-img {
+  display: block;  
+  width: 100%;
+  border: 1px solid #deb9bf;
+  border-radius: 50%;
+}
+
+
 .footer {
   display: flex;
   flex-direction: column;
