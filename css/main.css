@@ -77,7 +77,6 @@ a {
   margin: 0;
 }
 
-
 figure {
   margin: 5.5rem 1rem 5.5rem 3rem;
   text-align: center;
@@ -90,23 +89,65 @@ figure {
     justify-items: center;
     align-items: center;
     max-width: 900px;
-    margin: 0 auto;  
+    margin: 0 auto;
   }
 }
 
 .product-section-img {
-  display: block;  
+  display: block;
   width: 100%;
   border: 1px solid #deb9bf;
   border-radius: 50%;
 }
 
+/*footer*/
 
-.footer {
+.logo-footer {
+  width: 50%;
+  align-items: start;
+}
+
+.footer-navigation {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   list-style: none;
 
   font-weight: 500;
   font-size: 0.7rem;
+}
+
+footer {
+  background: #fea1a6;
+  width: 100%;
+  bottom: 0;
+  color: black;
+  padding: 100px 0 30px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin-left: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.col {
+  padding: 0;
+  margin-bottom: 4rem;
+  align-items: start;
+}
+
+.logo-footer {
+  font-family: "Kaushan Script", serif;
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #220806;
 }
