@@ -9,8 +9,7 @@ header {
   display: flex;
   align-items: center;
 
-  /* Elements spread across */
-  justify-content: space-between;
+  justify-content: space-between; /* Elements spread across */
   padding: 5px 15px;
 }
 
@@ -32,6 +31,8 @@ header {
   align-items: start;
 }
 
+/* Navigation */
+
 nav {
   display: flex;
   align-items: center;
@@ -52,14 +53,18 @@ nav {
 }
 
 .navigation-pages {
-  display: flex; /* Enables flexbox */
   justify-content: center; /* Centers the items horizontally */
   width: 100%;
 }
 
 .navigation-user-options {
-  /* Pushes options to the right */
-  margin-left: auto;
+  margin-left: auto; /* Pushes options to the right */
+
+  font-size: 18px;
+
+  /* Scaling the icons */
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 nav a {
@@ -77,7 +82,10 @@ a {
   display: block;
   width: 100%;
   margin: 0;
+  border: 1px solid #c6afde;
 }
+
+/* Sections */
 
 figure {
   margin: 5.5rem 1rem 5.5rem 3rem;
@@ -102,7 +110,7 @@ figure {
   border-radius: 50%;
 }
 
-/*footer*/
+/* Footer */
 
 .logo-footer {
   width: 50%;
