@@ -110,6 +110,40 @@ figure {
   border-radius: 50%;
 }
 
+.product-section-img {
+  animation-name: none;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  align-items: center;
+  justify-content: center;
+}
+.product-section-img:hover {
+  animation-name: zoom-in;
+}
+
+.product-section-img:not(:hover) {
+  animation-name: zoom-out;
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.07);
+  }
+}
+
+@keyframes zoom-out {
+  0% {
+    transform: scale(1.07);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /* Footer */
 
 .logo-footer {
