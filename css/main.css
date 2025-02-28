@@ -180,3 +180,11 @@ h4 {
   font-weight: 500;
   color: var(--navigation-color);
 }
+
+.social-links {
+    font-size: 1.75rem;
+}
+
+.social-links li a:not(:last-child) {
+  margin-right: 1rem; /* Adjust the value to get your desired spacing */
+}

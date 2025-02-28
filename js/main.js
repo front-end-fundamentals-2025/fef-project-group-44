@@ -2,6 +2,8 @@ const navigationElements = document.getElementsByClassName(
   "navigation-user-options"
 );
 
+const socialElements = document.getElementsByClassName("social-links");
+
 // Loop through the navigation menus (in case there's more than one like now)
 for (let i = 0; i < navigationElements.length; i++) {
   // Get all icons inside the current navigation menu
