@@ -1,8 +1,11 @@
 /* Home page */
 :root {
   --navigation-color: #220806;
+  --primary-color: #fea1a6;
+  --secondary-color: #fdd4da;
   /*+headings color, primary for text etc*/
   --primary-font: "Poppins", serif;
+  
 }
 
 header {
@@ -43,30 +46,6 @@ nav {
   font-weight: 500;
 }
 
-.navigation-pages,
-.navigation-user-options {
-  display: flex;
-  list-style: none;
-  padding-left: 0;
-  gap: 20px;
-  margin: 0;
-}
-
-.navigation-pages {
-  justify-content: center; /* Centers the items horizontally */
-  width: 100%;
-}
-
-.navigation-user-options {
-  margin-left: auto; /* Pushes options to the right */
-
-  font-size: 18px;
-
-  /* Scaling the icons */
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-}
-
 nav a {
   color: var(--navigation-color);
 }
@@ -76,6 +55,42 @@ a {
   text-decoration: none;
   color: var(--navigation-color);
   font-weight: 500;
+}
+
+.navigation-pages,
+.navigation-user-options {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+.navigation-pages {
+  justify-content: center; /* Centers the items horizontally */
+  width: 100%;
+}
+
+.navigation-pages a {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  padding: 2.5px 0;
+}
+
+.navigation-pages a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.8px;
+  background-color: var(--navigation-color); 
+  transition: width 0.6s ease-in-out;
+}
+
+.navigation-pages a:hover::after {
+  width: 100%;
 }
 
 #main-img {
@@ -90,6 +105,10 @@ a {
 figure {
   margin: 5.5rem 1rem 5.5rem 3rem;
   text-align: center;
+}
+
+figcaption {
+  margin-top: 12px; 
 }
 
 @media screen and (min-width: 520px) {
@@ -118,6 +137,7 @@ figure {
   align-items: center;
   justify-content: center;
 }
+
 .product-section-img:hover {
   animation-name: zoom-in;
 }
@@ -144,6 +164,75 @@ figure {
   }
 }
 
+/* Timer */
+
+.sale-banner, .countdown-container {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  text-align: center;
+}
+
+.sale-banner {
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 0; 
+  margin: 0; 
+  width: 100vw; /* Full viewport width */
+  max-width: none; 
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  margin-bottom: 85px;
+}
+
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.countdown-container p {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 80px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+}
+
+.countdown-container p strong {
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: block;
+}
+
+/* Progress bar animation for seconds */
+.progress-bar {
+  width: 80%;
+  height: 10px;
+  background: #fff;
+  border-radius: 5px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  width: 100%;
+  background: #ff4f7c;
+  animation: countdown 60s linear infinite;
+}
+
+@keyframes countdown {
+  from {
+      width: 100%;
+  }
+  to {
+      width: 0%;
+  }
+}
+
 /* Footer */
 
 .logo-footer {
@@ -164,7 +253,7 @@ figure {
 }
 
 footer {
-  background: #fea1a6;
+  background: var(--primary-color);
   width: 100%;
   bottom: 0;
   color: var(--navigation-color);
