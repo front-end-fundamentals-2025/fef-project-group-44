@@ -12,7 +12,7 @@ body {
 }
 /* The next 2 lines were adapted from this website: https://www.geeksforgeeks.org/how-to-change-the-color-of-range-slider-in-css/ */
 input[type="range"] {
-    width: 300px;        
+    width: 200px;        
     accent-color: pink; 
   }
 
@@ -62,6 +62,10 @@ input[type="range"] {
 .product figcaption {
     margin-top: 8px;
     font-size: 0.9rem;
+}
+
+.product-description {
+    color: #c86460;
 }
 
 /* Responsiveness */

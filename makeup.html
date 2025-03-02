@@ -28,8 +28,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
@@ -67,6 +72,21 @@
       <section class="filter-section">
         <h2>Makeup</h2>
         <section class="filter-group">
+          <h3>Sort By</h3>
+          <div>
+            <input type="checkbox" id="eyes" value="eyes" />
+            <span>Eyes</span>
+          </div>
+          <div>
+            <input type="checkbox" id="face" value="face" />
+            <span>Face</span>
+          </div>
+          <div>
+            <input type="checkbox" id="lips" value="lips" />
+            <span>Lips</span>
+          </div>
+        </section>
+        <section class="filter-group">
           <h3>Availability</h3>
           <div>
             <input type="checkbox" id="inStock" value="in-stock" />
@@ -82,16 +102,24 @@
         <section class="filter-group">
           <h3>Brand</h3>
           <div>
-            <input type="checkbox" id="brandA" value="BrandA" />
-            <span>Brand A</span>
+            <input type="checkbox" id="ETUDE" value="ETUDE" />
+            <span>ETUDE</span>
           </div>
           <div>
-            <input type="checkbox" id="brandB" value="BrandB" />
-            <span>Brand B</span>
+            <input type="checkbox" id="hince" value="hince" />
+            <span>hince</span>
           </div>
           <div>
-            <input type="checkbox" id="brandC" value="BrandC" />
-            <span>Brand C</span>
+            <input type="checkbox" id="Kaja Beauty" value="Kaja Beauty" />
+            <span>Kaja Beauty</span>
+          </div>
+          <div>
+            <input type="checkbox" id="Peripera" value="Peripera" />
+            <span>Peripera</span>
+          </div>
+          <div>
+            <input type="checkbox" id="rom&nd" value="rom&nd" />
+            <span>rom&nd</span>
           </div>
         </section>
 
@@ -102,11 +130,11 @@
             type="range"
             id="priceRange"
             min="0"
-            max="100"
+            max="300"
             value="50"
             step="1"
           />
-          <span id="priceValue">50</span>
+          <span id="priceValue">150</span>
         </section>
       </section>
 
@@ -115,130 +143,208 @@
         <figure
           class="product"
           data-stock="in-stock"
-          data-brand="BrandA"
-          data-price="20">
-          <img src="img/makeup/peripera-palette.jpg" alt="" style="max-width: 200px" />
+          data-brand="Peripera"
+          data-price="250"
+        >
+          <img
+            src="img/makeup/peripera-palette.jpg"
+            alt=""
+            style="max-width: 200px"
+          />
           <figcaption>
-            <p>Brand A</p> 
-            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 121 Reviews</p>
-            <p>$20</p>
+            <p><strong>Peripera</strong> All Take Mood Palette</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> 120 Reviews
+            </p>
+            <p>250 SEK</p>
           </figcaption>
         </figure>
 
         <figure
           class="product"
           data-stock="in-stock"
-          data-brand="BrandB"
-          data-price="45">
-          <img src="img/makeup/etude-tint.jpg" alt="" style="max-width: 200px" />
+          data-brand="ETUDE"
+          data-price="135"
+        >
+          <img
+            src="img/makeup/etude-tint.jpg"
+            alt=""
+            style="max-width: 200px"
+          />
           <figcaption>
-            <p>Brand B</p> 
-            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 50 Reviews</p>
-            <p>$45</p>
+            <p><strong>ETUDE</strong> Fixing long-lasting Tint</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> 51 Reviews
+            </p>
+            <p>135 SEK</p>
           </figcaption>
         </figure>
 
         <figure
           class="product"
           data-stock="in-stock"
-          data-brand="BrandB"
-          data-price="45">
+          data-brand="Kaja Beauty"
+          data-price="220"
+        >
           <img src="img/makeup/kaja-eye.jpg" alt="" style="max-width: 200px" />
           <figcaption>
-            <p>Brand B</p> 
-            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 50 Reviews</p>
-            <p>$45</p>
+            <p><strong>Kaja</strong> Bento Eyeshadow Trio</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> 144 Reviews
+            </p>
+            <p>220 SEK</p>
           </figcaption>
         </figure>
 
         <figure
           class="product"
-          data-stock="in-stock"
-          data-brand="BrandB"
-          data-price="45">
+          data-stock="out-of-stock"
+          data-brand="Peripera"
+          data-price="127"
+        >
           <img src="img/makeup/lips.jpg" alt="" style="max-width: 200px" />
           <figcaption>
-            <p>Brand B</p> 
-            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 50 Reviews</p>
-            <p>$45</p>
+            <p><strong>Peripera</strong> Ink Velvet Tint</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 90 Reviews
+            </p>
+            <p>127 SEK</p>
           </figcaption>
         </figure>
 
         <figure
           class="product"
-          data-stock="in-stock"
-          data-brand="BrandB"
-          data-price="45">
-          <img src="img/makeup/etude-mascara.jpg" alt="" style="max-width: 200px" />
+          data-stock="out-of-stock"
+          data-brand="ETUDE"
+          data-price="260"
+        >
+          <img
+            src="img/makeup/etude-mascara.jpg"
+            alt=""
+            style="max-width: 200px"
+          />
           <figcaption>
-            <p>Brand B</p> 
-            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 50 Reviews</p>
-            <p>$45</p>
+            <p><strong>ETUDE</strong> Curl Fix Mascara</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> 178 Reviews
+            </p>
+            <p>260 SEK</p>
           </figcaption>
         </figure>
 
         <figure
           class="product"
           data-stock="in-stock"
-          data-brand="BrandB"
-          data-price="45">
-          <img src="img/makeup/kaja-blush.jpeg" alt="" style="max-width: 200px" />
+          data-brand="Kaja Beauty"
+          data-price="246"
+        >
+          <img
+            src="img/makeup/kaja-blush.jpeg"
+            alt=""
+            style="max-width: 200px"
+          />
           <figcaption>
-            <p>Brand B</p> 
-            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 50 Reviews</p>
-            <p>$45</p>
+            <p><strong>Kaja</strong> Cheeky Stamp Blendable Blush</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> 256 Reviews
+            </p>
+            <p>246 SEK</p>
           </figcaption>
         </figure>
 
         <figure
           class="product"
           data-stock="in-stock"
-          data-brand="BrandB"
-          data-price="45">
+          data-brand="rom&nd"
+          data-price="140"
+        >
           <img src="img/makeup/rom-lips.jpeg" alt="" style="max-width: 200px" />
           <figcaption>
-            <p>Brand B</p> 
-            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 50 Reviews</p>
-            <p>$45</p>
+            <p><strong>rom&nd</strong> Glasting Melting Balm</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 52 Reviews
+            </p>
+            <p>140 SEK</p>
+          </figcaption>
+        </figure>
+
+        <figure
+          class="product"
+          data-stock="out-of-stock"
+          data-brand="hince"
+          data-price="300"
+        >
+          <img
+            src="img/makeup/hince-cush.jpg"
+            alt=""
+            style="max-width: 200px"
+          />
+          <figcaption>
+            <p><strong>hince</strong> Second Skin Glow Cushion</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 394 Reviews
+            </p>
+            <p>300 SEK</p>
+          </figcaption>
+        </figure>
+
+        <figure
+          class="product"
+          data-stock="out-of-stock"
+          data-brand="Peripera"
+          data-price="258"
+        >
+          <img
+            src="img/makeup/peripera-stick.jpg"
+            alt=""
+            style="max-width: 200px"
+          />
+          <figcaption>
+            <p><strong>Peripera </strong> Sugar Twinkle Duo Eye Stick</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 138 Reviews
+            </p>
+            <p>258 SEK</p>
           </figcaption>
         </figure>
 
         <figure
           class="product"
           data-stock="in-stock"
-          data-brand="BrandB"
-          data-price="45">
-          <img src="img/makeup/hince-cush.jpg" alt="" style="max-width: 200px" />
+          data-brand="hince"
+          data-price="230"
+        >
+          <img
+            src="img/makeup/hince-blush.jpg"
+            alt=""
+            style="max-width: 200px"
+          />
           <figcaption>
-            <p>Brand B</p> 
-            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 50 Reviews</p>
-            <p>$45</p>
-          </figcaption>
-        </figure>
-
-        <figure
-          class="product"
-          data-stock="in-stock"
-          data-brand="BrandB"
-          data-price="45">
-          <img src="img/makeup/peripera-stick.jpg" alt="" style="max-width: 200px" />
-          <figcaption>
-            <p>Brand B</p> 
-            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 50 Reviews</p>
-            <p>$45</p>
-          </figcaption>
-        </figure>
-
-        <figure
-          class="product"
-          data-stock="in-stock"
-          data-brand="BrandB"
-          data-price="45">
-          <img src="img/makeup/hince-blush.jpg" alt="" style="max-width: 200px" />
-          <figcaption>
-          <p>Brand B</p> 
-          <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 50 Reviews</p>
-          <p>$45</p>
+            <p><strong>hince</strong> True Dimension Glow Cheek</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> 49 Reviews
+            </p>
+            <p>230 SEK</p>
           </figcaption>
         </figure>
       </section>
