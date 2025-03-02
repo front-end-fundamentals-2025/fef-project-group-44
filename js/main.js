@@ -35,7 +35,7 @@ for (let i = 0; i < navigationElements.length; i++) {
   }
 }
 
-/* Social media icons scaling*/ 
+/* Social media icons scaling*/
 
 for (let i = 0; i < socialElements.length; i++) {
   // Get all icons inside the current navigation menu
@@ -48,7 +48,7 @@ for (let i = 0; i < socialElements.length; i++) {
     });
 
     // Unscale back to the initial size when the mouse leaves
-   socialIcons[j].addEventListener("mouseleave", function () {
+    socialIcons[j].addEventListener("mouseleave", function () {
       this.style.transform = "scale(1)";
     });
   }
@@ -56,37 +56,36 @@ for (let i = 0; i < socialElements.length; i++) {
 
 /* Countdown timer*/
 
-const Days = document.getElementById('days'); 
-const Hours = document.getElementById('hours'); 
-const Minutes = document.getElementById('minutes'); 
-const Seconds = document.getElementById('seconds'); 
+const Days = document.getElementById("days");
+const Hours = document.getElementById("hours");
+const Minutes = document.getElementById("minutes");
+const Seconds = document.getElementById("seconds");
 
-const targetDate = new Date("May 2, 2025 23:59:59").getTime(); 
+const targetDate = new Date("May 2, 2025 23:59:59").getTime();
 
-function timer() { 
-    const currentDate = new Date().getTime(); 
-    const distance = targetDate - currentDate; 
+function timer() {
+  const currentDate = new Date().getTime();
+  const distance = targetDate - currentDate;
 
-    if (distance < 0) { 
-        Days.innerHTML = "00"; 
-        Hours.innerHTML = "00"; 
-        Minutes.innerHTML = "00"; 
-        Seconds.innerHTML = "00"; 
-        clearInterval(countdownInterval);
-        return;
-    } 
+  if (distance < 0) {
+    Days.innerHTML = "00";
+    Hours.innerHTML = "00";
+    Minutes.innerHTML = "00";
+    Seconds.innerHTML = "00";
+    clearInterval(countdownInterval);
+    return;
+  }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24)); 
-    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24); 
-    const minutes = Math.floor((distance / (1000 * 60)) % 60); 
-    const seconds = Math.floor((distance / 1000) % 60); 
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((distance / (1000 * 60)) % 60);
+  const seconds = Math.floor((distance / 1000) % 60);
 
-    Days.innerHTML = days < 10 ? "0" + days : days; 
-    Hours.innerHTML = hours < 10 ? "0" + hours : hours; 
-    Minutes.innerHTML = minutes < 10 ? "0" + minutes : minutes; 
-    Seconds.innerHTML = seconds < 10 ? "0" + seconds : seconds; 
-} 
+  Days.innerHTML = days < 10 ? "0" + days : days;
+  Hours.innerHTML = hours < 10 ? "0" + hours : hours;
+  Minutes.innerHTML = minutes < 10 ? "0" + minutes : minutes;
+  Seconds.innerHTML = seconds < 10 ? "0" + seconds : seconds;
+}
 
-const countdownInterval = setInterval(timer, 1000); 
+const countdownInterval = setInterval(timer, 1000);
 timer();
-
