@@ -239,6 +239,7 @@ figcaption {
 }
 
 .countdown-container p {
+  display: block;
   background: white;
   padding: 10px;
   border-radius: 5px;
@@ -250,7 +251,6 @@ figcaption {
 .countdown-container p strong {
   font-size: 1.25rem;
   font-weight: bold;
-  display: block;
 }
 
 /* Progress bar animation for seconds */
