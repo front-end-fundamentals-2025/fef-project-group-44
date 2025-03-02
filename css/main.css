@@ -8,6 +8,54 @@
   
 }
 
+/*The way to create a marquee and modfy it in CSS was learnt from this video: https://www.youtube.com/watch?v=hOkPZOEIAh4&ab_channel=RyanWebTech*/
+/* Marquee Scrolling Text */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background: var(--primary-color);
+  color: var(--navigation-color);
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  font-weight: 400;
+  white-space: nowrap;
+  position: relative;
+  padding: 10px 0;
+}
+
+.marquee {
+  /* The marquee is 80% wide so it can hold both copies of text side by side */
+  width: 80%;
+  animation: marquee 27s linear infinite;  
+  display: inline-flex;
+  /* Each copy of the marquee text takes up 50% */
+  gap: 20rem;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Keyframes to animate from 0% to -50% horizontally */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .marquee__group {
+    gap: 4rem; /* Reduce space between each span */
+  }
+  .marquee {
+    /* Optionally adjust the animation duration for a smoother scroll */
+    width: 100%;
+    animation-duration: 20s;
+  }
+}
+
 header {
   display: flex;
   align-items: center;

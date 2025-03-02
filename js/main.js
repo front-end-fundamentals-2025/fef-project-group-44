@@ -1,5 +1,16 @@
 /* Navigation icons scaling */
 
+//Marquee
+const marquee = document.querySelector(".marquee");
+marquee.addEventListener("mouseover", function () {
+  //animationPlayState was taken from this website and transformed into js format: https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state
+  this.style.animationPlayState = "paused";
+});
+
+marquee.addEventListener("mouseleave", function () {
+  this.style.animationPlayState = "running";
+});
+
 const navigationElements = document.getElementsByClassName(
   "navigation-user-options"
 );
