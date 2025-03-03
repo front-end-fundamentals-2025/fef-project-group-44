@@ -1,7 +1,5 @@
 body {
   font-family: var(--primary-font);
-  margin: 0;
-  padding: 0;
   color: var(--navigation-color);
 }
 
@@ -48,7 +46,6 @@ input[type="range"] {
 
 /* Figures Styling */
 .product {
-  background: #fff;
   text-align: start;
   margin-top: 15px;
   margin-bottom: 15px;

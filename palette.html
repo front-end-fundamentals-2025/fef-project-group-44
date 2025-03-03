@@ -3,17 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Link to your CSS files -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/palette.css" />
-
-    <!-- Link to your JS files -->
     <script src="js/main.js" defer></script>
     <script src="js/palette.js" defer></script>
-
     <title>Makeup</title>
-
-    <!-- Fonts and Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,11 +35,14 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body>
-    <!-- HEADER (unchanged) -->
     <header>
       <img id="logo-img" src="img/strawberry-logo.png" alt="logo" />
-      <p class="logo-name">Strawberry Kiss</p>
+      <a href="main.html">
+        <p class="logo-name">Strawberry Kiss</p>
+      </a>
+
       <nav>
         <ul class="navigation-pages">
           <a href="makeup.html">
@@ -75,77 +72,112 @@
       </nav>
     </header>
 
-    <!-- MAIN CONTENT -->
     <main>
-        <section class="product-section">
-          <!-- Left Column: Product Image -->
-          <section class="product-img-container">
-            <img
-              src="img/makeup/peripera-palette.jpg"
-              alt="rom&nd Glasting Melting Balm"
-            />
+      <section class="product-section">
+        <section class="product-img-container">
+          <img
+            src="img/makeup/peripera-palette.jpg"
+            alt="rom&nd Glasting Melting Balm"
+          />
+        </section>
+
+        <section class="product-info-container">
+          <!-- Title & Price -->
+          <h1 class="product-title"><p>Peripera All Take Mood Palette</p></h1>
+          <p><i class="fa-regular fa-circle-check"></i> Item is in stock</p>
+          <p class="product-price"><strong>160 SEK</strong></p>
+
+          <!-- Description -->
+          <p class="product-description">
+            All Take Mood Palette offers a blend of matte, shimmery, and
+            glittery shades for eyes, cheeks, and highlight. Its versatile
+            colors and playful heart-shaped pan make it perfect for creating
+            effortless soft glam looks.
+          </p>
+
+          <!-- Shade Options -->
+          <section class="shade-options">
+            <h3>Available Shades</h3>
+            <ul>
+              <li>01 Mood Breathing</li>
+              <li>04 Muteful Rose</li>
+              <li>05 Whisper of Milky Spring</li>
+              <li>09 Moonlike Lavender Pink</li>
+              <li>11 Pinkterest</li>
+              <li>13 Fall in Acorn</li>
+              <li>15 Tulipology</li>
+            </ul>
           </section>
-      
-          <!-- Right Column: Product Info -->
-          <section class="product-info-container">
-            <!-- Title & Price -->
-            <h1 class="product-title">rom&nd Glasting Melting Balm</h1>
-            <p class="product-price">€13,50</p>
-      
-            <!-- Description -->
-            <p class="product-description">
-              The Glasting Melting Balm is a moisturizing balm with a plump, tinted finish 
-              and a comfortable, non-sticky texture. Available in multiple shades to suit every preference.
-            </p>
-      
-            <!-- Shade Options -->
-            <section class="shade-options">
-              <h3>Available Shades</h3>
+
+          <!-- Buttons -->
+          <section class="product-buttons">
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="buy-now">Buy Now</button>
+          </section>
+
+          <!-- Ingredients Dropdown -->
+          <section class="ingredients-dropdown">
+            <section class="ingredients-header">
+              <h3>Ingredients</h3>
+              <!-- The plus button to toggle the dropdown -->
+              <button class="plus-button">+</button>
+            </section>
+            <section class="ingredients-content-hidden">
               <ul>
-                <li>01 Coco Nude</li>
-                <li>02 Lovely Pink</li>
-                <li>03 Sorbet Balm</li>
-                <li>04 Ice Peach</li>
-                <li>05 Mauve Whip</li>
-                <li>06 Kugi Fig</li>
+                <li>
+                  <strong>Base:</strong> Talc, Mica (CI 77019), Titanium Dioxide
+                  (CI 77891), Silica, Zinc Stearate, Aluminum Myristate.
+                </li>
+                <li>
+                  <strong>Binders and Emollients:</strong>
+                  Polymethylsilsesquioxane, Diisostearyl Malate, Dimethicone,
+                  Phenyl Trimethicone, Ethylhexyl Palmitate, Hydrogenated
+                  Poly(C6-14 Olefin), Caprylic/Capric Triglyceride,
+                  Bis-Diglyceryl Polyacyladipate-2,
+                  Bis-Behenyl/Isostearyl/Phytosteryl Dimer Dilinoleyl Dimer
+                  Dilinoleate.
+                </li>
+                <li>
+                  <strong>Film Formers and Texture Enhancers:</strong>
+                  Dimethicone Crosspolymer, Trimethylpentanediol/Adipic
+                  Acid/Glycerin Crosspolymer, Methyl Methacrylate Crosspolymer,
+                  Lauroyl Lysine, Calcium Aluminum Borosilicate, Calcium
+                  Titanium Borosilicate, Synthetic Fluorphlogopite, Acrylates
+                  Copolymer, Polypropylene, Hydrogenated Polyisobutene,
+                  Polyisobutene, Ethylene/Propylene/Styrene Copolymer, Polyvinyl
+                  Acetate.
+                </li>
+                <li>
+                  <strong>Preservatives and Stabilizers:</strong>
+                  Phenoxyethanol, Ethylhexylglycerin, 1,2-Hexanediol, Glyceryl
+                  Caprylate, Caprylyl Glycol, Tocopheryl Acetate.
+                </li>
+                <li>
+                  <strong>Colorants:</strong> Iron Oxides (CI 77491, CI 77492,
+                  CI 77499), Carmine (CI 75470), Ultramarines (CI 77007), Yellow
+                  No. 5 (CI 19140), Ferric Ferrocyanide (CI 77510), Tartrazine.
+                </li>
               </ul>
             </section>
-      
-            <!-- Buttons -->
-            <section class="product-buttons">
-              <button class="add-to-cart">Add to Cart</button>
-              <button class="buy-now">Buy Now</button>
-            </section>
-      
-            <!-- Ingredients Dropdown -->
-            <section class="ingredients-dropdown">
-              <section class="ingredients-header">
-                <h3>Ingredients</h3>
-                <!-- The plus button to toggle the dropdown -->
-                <button class="toggle-button">+</button>
-              </section>
-              <section class="ingredients-content hidden">
-                <p>
-                  <strong>Ingredient List:</strong> Hydrogenated Polyisobutene, Polyglyceryl-2 Triisostearate, 
-                  Synthetic Wax, Diisostearyl Malate, Ethylhexyl Palmitate, Hydrogenated Poly(C6-14 Olefin), 
-                  etc. (This is just sample text; replace with actual list as needed.)
-                </p>
-              </section>
-              
-              <!-- Shipping info -->
-              <section>
-                <ul>
-                    <li>Fast Delivery from Helsinki</li>
-                    <li>14-day return Policy</li>
-                    <li>100% Genuine Products Guaranteed</li>
-                </ul>
-              </section>
+
+            <!-- Shipping info -->
+            <section>
+              <ul class="shipping-info">
+                <li>
+                  <i class="fa-solid fa-plane"></i> Fast Delivery from Helsinki
+                </li>
+                <li><i class="fa-solid fa-shield"></i> 14-day return Policy</li>
+                <li>
+                  <i class="fa-solid fa-face-smile"></i> 100% Genuine Products
+                  Guaranteed
+                </li>
+              </ul>
             </section>
           </section>
         </section>
-      </main>
+      </section>
+    </main>
 
-    <!-- FOOTER (unchanged) -->
     <footer>
       <section class="footer-container">
         <section class="row">
@@ -193,4 +225,3 @@
     </footer>
   </body>
 </html>
-

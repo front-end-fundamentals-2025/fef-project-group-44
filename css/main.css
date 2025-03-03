@@ -60,6 +60,8 @@ header {
 
   justify-content: space-between; /* Elements spread across */
   padding: 5px 15px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* Logo */
