@@ -33,7 +33,7 @@
   padding: 0;
 }
 
-/* Keyframes to animate from 0% to -50% horizontally */
+/* Keyframes to animate horizontally */
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -48,7 +48,7 @@
     gap: 4rem; /* Reduce space between each span */
   }
   .marquee {
-    /* Optionally adjust the animation duration for a smoother scroll */
+    /* Animation duration for a smoother scroll */
     width: 100%;
     animation-duration: 20s;
   }
@@ -57,8 +57,8 @@
 header {
   display: flex;
   align-items: center;
-
   justify-content: space-between; /* Elements spread across */
+
   padding: 5px 15px;
   padding-top: 0;
   padding-bottom: 0;
