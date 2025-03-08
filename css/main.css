@@ -4,6 +4,7 @@
   --primary-color: #fea1a6;
   --secondary-color: #fdd4da;
   --decoration-color: #ff6f9c;
+  --decoration-color-darker: #ff4f7c;
   --primary-font: "Poppins", serif;
 }
 
@@ -269,7 +270,7 @@ figcaption {
 .progress {
   height: 100%;
   width: 100%;
-  background: #ff4f7c;
+  background: var(--decoration-color-darker);
   animation: countdown 60s linear infinite;
 }
 
