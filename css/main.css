@@ -3,7 +3,7 @@
   --navigation-color: #220806;
   --primary-color: #fea1a6;
   --secondary-color: #fdd4da;
-  /*+headings color, primary for text etc*/
+  --decoration-color: #ff6f9c;
   --primary-font: "Poppins", serif;
 }
 
@@ -239,7 +239,9 @@ figcaption {
 }
 
 .countdown-container p {
-  display: block;
+  display: flex;
+  flex-direction: column; /* Stack number and text vertically */
+  align-items: center;
   background: white;
   padding: 10px;
   border-radius: 5px;

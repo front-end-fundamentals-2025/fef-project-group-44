@@ -76,7 +76,7 @@ main {
 
 .product-price {
   font-size: 1rem;
-  color: #ff6f9c;
+  color: var(--decoration-color);
 }
 
 /* Description */
@@ -104,10 +104,16 @@ main {
 }
 
 .shade-options li {
-  background-color: #f7f7f7;
+  border: 0.1px solid #A9A9A9;
+  border-radius: 4px;
   padding: 0.5rem 0.8rem;
   margin: 0.3rem;
-  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.shade-options li:hover {
+  background-color: var(--navigation-color);
+  color: #fff;
 }
 
 /* Buttons */
@@ -117,17 +123,19 @@ main {
 }
 .product-buttons button {
   font-family: var(--primary-font);
-  background-color: #ff6f9c;
+  background-color: var(--decoration-color);
   color: #fff;
   border: none;
   border-radius: 3px;
   padding: 0.6rem 1rem;
   cursor: pointer;
   margin-right: 0.5rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.4s ease-in-out;
 }
 .product-buttons button:hover {
-  background-color: #ff3c79;
+  background-color: #fbdcec;
+  color: var(--navigation-color);
+  border: 0.5px solid var(--navigation-color);
 }
 
 /* Ingredients Dropdown */
@@ -149,6 +157,16 @@ main {
 }
 
 .plus-button {
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.plus-button:hover {
+  background-color: var(--decoration-color);;
+  color: #fff;
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
