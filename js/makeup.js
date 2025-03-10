@@ -66,6 +66,23 @@ document.addEventListener("click", function (event) {
   }
 });
 
+// Search Bar Functionality
+
+// The way how to make working search bar was learnt from this video: https://www.youtube.com/watch?v=ifi6dXOl3g4&list=LL&index=5&t=299s&ab_channel=Treehouse
+const nameSearch = document.getElementById("nameSearch");
+nameSearch.addEventListener("keyup", (e) => {
+  let currentValue = e.target.value.toLowerCase();
+  let names = document.querySelectorAll("p.product-name");
+  names.forEach((name) => {
+    let product = name.closest("figure"); // Find the closest figure (product)
+    if (name.textContent.toLowerCase().includes(currentValue)) {
+      product.style.display = "block"; // Show the product if it matches
+    } else {
+      product.style.display = "none";
+    }
+  });
+});
+
 // Product filters
 
 // Get elements by their IDs
