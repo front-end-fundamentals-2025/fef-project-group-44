@@ -1,5 +1,3 @@
-/* Navigation icons scaling */
-
 //Marquee
 const marquee = document.querySelector(".marquee");
 marquee.addEventListener("mouseover", function () {
@@ -10,6 +8,8 @@ marquee.addEventListener("mouseover", function () {
 marquee.addEventListener("mouseleave", function () {
   this.style.animationPlayState = "running";
 });
+
+// Navigation icons scaling 
 
 const navigationElements = document.getElementsByClassName(
   "navigation-user-options"
@@ -35,7 +35,7 @@ for (let i = 0; i < navigationElements.length; i++) {
   }
 }
 
-/* Social media icons scaling*/
+// Social media icons scaling
 
 for (let i = 0; i < socialElements.length; i++) {
   // Get all icons inside the current navigation menu
@@ -54,8 +54,9 @@ for (let i = 0; i < socialElements.length; i++) {
   }
 }
 
-/* Countdown timer*/
+// Countdown timer
 
+// The way how to do the countdown timer was learnt from this video: https://youtu.be/34kbdFLpff8?si=P774Cr5gECMlKMY9
 const Days = document.getElementById("days");
 const Hours = document.getElementById("hours");
 const Minutes = document.getElementById("minutes");
