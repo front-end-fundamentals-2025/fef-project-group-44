@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/makeup.css" />
+    <script src="js/main.js" defer></script>
+    <script src="js/skincare.js" defer></script>
+    <title>Makeup</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <img id="logo-img" src="img/strawberry-logo.png" alt="logo" />
+      <a href="main.html">
+        <p class="logo-name">Strawberry Kiss</p>
+      </a>
+
+      <nav>
+        <ul class="navigation-pages">
+          <a href="makeup.html">
+            <li>Makeup</li>
+          </a>
+          <a href="skincare.html">
+            <li>Skincare</li>
+          </a>
+          <a href="suncare.html">
+            <li>Suncare</li>
+          </a>
+        </ul>
+        <ul class="navigation-user-options">
+          <a href="">
+            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+          </a>
+          <a href="favorites.html">
+            <li><i class="fa-regular fa-heart"></i></li>
+          </a>
+          <a href="shopping-cart.html">
+            <li><i class="fa-solid fa-bag-shopping"></i></li
+          ></a>
+          <a href="login.html">
+            <li><i class="fa-regular fa-circle-user"></i></li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <main class="makeup-container">
+      <section class="filter-section">
+        <h2>Makeup</h2>
+        <section class="filter-group">
+          <h3>Sort By</h3>
+          <div>
+            <input type="checkbox" id="serums" value="serums" />
+            <span>Serums</span>
+          </div>
+          <div>
+            <input type="checkbox" id="cleansers" value="cleansers" />
+            <span>Cleansers</span>
+          </div>
+          <div>
+            <input type="checkbox" id="masks" value="masks" />
+            <span>Masks</span>
+          </div>
+          <div>
+            <input type="checkbox" id="moisturizer" value="moisturizer" />
+            <span>Moisturizers</span>
+          </div>
+        </section>
+        <section class="filter-group">
+          <h3>Availability</h3>
+          <div>
+            <input type="checkbox" id="inStock" value="in-stock" />
+            <span>In Stock</span>
+          </div>
+          <div>
+            <input type="checkbox" id="outOfStock" value="out-of-stock" />
+            <span>Out of Stock</span>
+          </div>
+        </section>
+
+        <!-- Brand Names -->
+        <section class="filter-group">
+          <h3>Brand</h3>
+          <div>
+            <input type="checkbox" id="ANUA" value="ANUA" />
+            <span>ANUA</span>
+          </div>
+          <div>
+            <input type="checkbox" id="belif" value="belif" />
+            <span>belif</span>
+          </div>
+          <div>
+            <input type="checkbox" id="ETUDE" value="ETUDE" />
+            <span>ETUDE</span>
+          </div>
+          <div>
+            <input type="checkbox" id="LANEIGE" value="LANEIGE" />
+            <span>LANEIGE</span>
+          </div>
+          <div>
+            <input type="checkbox" id="Manyo" value="Manyo" />
+            <span>Ma:nyo</span>
+          </div>
+        </section>
+
+        <!-- Price -->
+        <section class="filter-group">
+          <h3>Price</h3>
+          <input
+            type="range"
+            id="priceRange"
+            min="0"
+            max="300"
+            value="300"
+            step="1"
+          />
+          <span id="priceValue">300</span>
+        </section>
+      </section>
+
+      <!-- Products Section -->
+      <section class="products-container">
+        <a href="palette.html">
+          <figure
+            class="product"
+            data-category="serums"
+            data-stock="in-stock"
+            data-brand="ANUA"
+            data-price="160"
+          >
+            <img
+              class="product-1"
+              src="img/skincare/anua-serum-10.jpg"
+              alt=""
+            />
+            <img class="product-2" src="img/makeup/palette-2.jpg" alt="" />
+            <figcaption>
+              <p><strong>ANUA</strong> All Take Mood Palette</p>
+              <p class="product-description">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i> 120 Reviews
+              </p>
+              <p>160 SEK</p>
+            </figcaption>  
+          </figure>
+        </a>
+
+        <figure
+          class="product"
+          data-category="serums"
+          data-stock="in-stock"
+          data-brand="ANUA"
+          data-price="135"
+        >
+          <img class="product-1" src="img/skincare/anua-serum-70.png" alt="" />
+          <img class="product-2" src="img/makeup/tint-2.jpg" alt="" />
+          <figcaption>
+            <p><strong>ANUA</strong> Fixing long-lasting Tint</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> 51 Reviews
+            </p>
+            <p>135 SEK</p>
+          </figcaption>
+        </figure>
+
+        <figure
+          class="product"
+          data-category="cleansers"
+          data-stock="in-stock"
+          data-brand="Manyo"
+          data-price="220"
+        >
+          <img class="product-1" src="img/skincare/manyo-cleanser.jpg" alt="" />
+          <img class="product-2" src="img/makeup/eye-2.jpg" alt="" />
+          <figcaption>
+            <p><strong>Ma:nyo</strong> Bento Eyeshadow Trio</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> 144 Reviews
+            </p>
+            <p>220 SEK</p>
+          </figcaption>
+        </figure>
+
+        <figure
+          class="product"
+          data-category="cleansers"
+          data-stock="out-of-stock"
+          data-brand="ETUDE"
+          data-price="127"
+        >
+          <img class="product-1" src="img/skincare/etude-cleanser.png" alt="" />
+          <img class="product-2" src="img/makeup/lips-2.jpg" alt="" />
+          <figcaption>
+            <p><strong>ETUDE</strong> Ink Velvet Tint</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> 90 Reviews
+            </p>
+            <p>127 SEK</p>
+          </figcaption>
+        </figure>
+
+        <figure
+          class="product"
+          data-category="moisturizer"
+          data-stock="out-of-stock"
+          data-brand="ETUDE"
+          data-price="260"
+        >
+          <img class="product-1" src="img/skincare/etude-moisturizer.png" alt="" />
+          <img class="product-2" src="img/makeup/mascara-2.jpg" alt="" />
+          <figcaption>
+            <p><strong>ETUDE</strong> Curl Fix Mascara</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> 178 Reviews
+            </p>
+            <p>260 SEK</p>
+          </figcaption>
+        </figure>
+
+        <figure
+          class="product"
+          data-category="masks"
+          data-stock="in-stock"
+          data-brand="belif"
+          data-price="246"
+        >
+          <img class="product-1" src="img/skincare/belif-night-mask.png" alt="" />
+          <img class="product-2" src="img/makeup/cheeks-2.jpg" alt="" />
+          <figcaption>
+            <p><strong>belif</strong> Cheeky Stamp Blendable Blush</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> 256 Reviews
+            </p>
+            <p>246 SEK</p>
+          </figcaption>
+        </figure>
+
+        <figure
+          class="product"
+          data-category="moisturizer"
+          data-stock="in-stock"
+          data-brand="belif"
+          data-price="140"
+        >
+          <img class="product-1" src="img/skincare/belif-moisturizer.jpg" alt="" />
+          <img class="product-2" src="img/makeup/balm-2.jpg" alt="" />
+          <figcaption>
+            <p><strong>belif</strong> Glasting Melting Balm</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> 52 Reviews
+            </p>
+            <p>140 SEK</p>
+          </figcaption>
+        </figure>
+
+        <figure
+          class="product"
+          data-category="masks"
+          data-stock="out-of-stock"
+          data-brand="LANEIGE"
+          data-price="300"
+        >
+          <img class="product-1" src="img/skincare/laneige-lip-mask.jpg" alt="" />
+          <img class="product-2" src="img/makeup/cusion-2.jpg" alt="" />
+          <figcaption>
+            <p><strong>LANEIGE</strong> Second Skin Glow Cushion</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> 394 Reviews
+            </p>
+            <p>300 SEK</p>
+          </figcaption>
+        </figure>
+
+        <figure
+          class="product"
+          data-category="masks"
+          data-stock="out-of-stock"
+          data-brand="LANEIGE"
+          data-price="258"
+        >
+          <img class="product-1" src="img/skincare/laneige-eye-mask.png" alt="" />
+          <img class="product-2" src="img/makeup/stick-2.jpeg" alt="" />
+          <figcaption>
+            <p><strong>LANEIGE</strong> Sugar Twinkle Duo Eye Stick</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> 138 Reviews
+            </p>
+            <p>258 SEK</p>
+          </figcaption>
+        </figure>
+
+        <figure
+          class="product"
+          data-category="masks"
+          data-stock="in-stock"
+          data-brand="Manyo"
+          data-price="230"
+        >
+          <img class="product-1" src="img/skincare/manyo-mask.png" alt="" />
+          <img class="product-2" src="img/makeup/blush-2.jpg" alt="" />
+          <figcaption>
+            <p><strong>Ma:nyo</strong> True Dimension Glow Cheek</p>
+            <p class="product-description">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> 49 Reviews
+            </p>
+            <p>230 SEK</p>
+          </figcaption>
+        </figure>
+      </section>
+    </main>
+  </body>
+  <footer>
+    <section class="footer-container">
+      <section class="row">
+        <section class="footer-col">
+          <a class="logo-footer" href="main.html">Strawberry Kiss 🍓</a>
+        </section>
+        <section class="footer-col">
+          <h4>Business Details</h4>
+          <p class="details">Strawberry Kiss, Lumora AB</p>
+          <p class="details">5678943-2</p>
+          <p class="details">Östra Storgatan 25, 55321 Jönköping, Sweden</p>
+          <p class="details">contact@strawberrykiss.com</p>
+        </section>
+        <section class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="makeup.html">Makeup</a></li>
+            <li><a href="skincare.html">Skincare</a></li>
+            <li><a href="suncare.html">Suncare</a></li>
+          </ul>
+        </section>
+        <section class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="">About us</a></li>
+            <li><a href="">Contact us</a></li>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+          </ul>
+        </section>
+        <section class="footer-col">
+          <h4>Follow us</h4>
+          <ul class="social-links">
+            <li>
+              <a href="https://www.instagram.com/">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.tiktok.com/">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+  </footer>
+</html>
