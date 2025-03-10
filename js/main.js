@@ -9,7 +9,7 @@ marquee.addEventListener("mouseleave", function () {
   this.style.animationPlayState = "running";
 });
 
-// Navigation icons scaling 
+// Navigation icons scaling
 
 const navigationElements = document.getElementsByClassName(
   "navigation-user-options"
@@ -34,6 +34,51 @@ for (let i = 0; i < navigationElements.length; i++) {
     });
   }
 }
+
+// Search Bar
+const searchIcon = document.querySelector(".search-icon");
+const searchInput = document.querySelector(".search-input");
+
+// Function to expand the search input
+function expandSearch() {
+  searchInput.style.width = "150px";
+  searchInput.style.opacity = "1";
+  searchInput.style.padding = "5px 10px";
+}
+
+// Function to collapse the search input
+function collapseSearch() {
+  // If the input is empty, collapse it back to small size
+  if (searchInput.value === "") {
+    searchInput.style.width = "0"; // Make it smaller
+    searchInput.style.opacity = "0"; // Make it invisible
+    searchInput.style.padding = "5px"; // Reset the padding
+  }
+}
+
+// When the user clicks the search icon, toggle the search input size
+searchIcon.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent form submission (page reload)
+  // The idea to use "stopPropagation" was taken from this link: https://www.w3schools.com/jsref/event_stoppropagation.asp
+  event.stopPropagation(); // Prevent the click from collapsing the search input
+
+  if (searchInput.style.width === "0px" || searchInput.style.width === "") {
+    expandSearch(); // Expand if it's collapsed
+  } else {
+    collapseSearch(); // Collapse if it's already expanded
+  }
+});
+
+// When the user clicks outside the search area, collapse the input
+document.addEventListener("click", function (event) {
+  // If the click is not inside the search icon or input, collapse the input
+  if (
+    !searchIcon.contains(event.target) &&
+    !searchInput.contains(event.target)
+  ) {
+    collapseSearch();
+  }
+});
 
 // Social media icons scaling
 
