@@ -106,3 +106,41 @@ input[type="checkbox"] {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+
+.totalQuantity { 
+  position: absolute;
+  top: 77px;      
+  right: 57px;       
+  background: var(--primary-color);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  color: var(--navigation-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.add-to-cart{
+  background-color: white;
+  color: var(--navigation-color);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  top: 57%;
+  left: 83%;
+  align-items: center;
+  opacity: 0;
+}
+
+.add-to-cart:hover {
+  background-color: #ff4f7c;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}

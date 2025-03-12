@@ -115,6 +115,11 @@ a {
   gap: 20px;
 }
 
+.navigation-user-options {
+  font-size: 1.3rem;
+}
+
+
 .navigation-pages {
   justify-content: center; /* Centers the items horizontally */
   width: 100%;
@@ -170,6 +175,7 @@ a {
   padding: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 1rem;
 }
 
 .search-icon:hover {

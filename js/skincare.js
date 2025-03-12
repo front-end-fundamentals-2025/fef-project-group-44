@@ -1,3 +1,4 @@
+//FILTERS
 // Get elements by their IDs
 var serums = document.getElementById('serums');
 var cleansers = document.getElementById('cleansers');
