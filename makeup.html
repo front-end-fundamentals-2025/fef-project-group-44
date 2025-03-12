@@ -72,7 +72,8 @@
         </ul>
       </nav>
     </header>
-    <main class="makeup-container">
+    <main 
+    class="makeup-container">
       <section class="filter-section">
         <h2>Makeup</h2>
         <section class="filter-group">
@@ -159,19 +160,21 @@
             />
             <img class="product-2" src="img/makeup/palette-2.jpg" alt="" />
             <figcaption>
-              <p class="product-name">
+              <div class="product-name">
                 <strong>Peripera</strong> All Take Mood Palette
-              </p>
+              </div>
               <p class="product-description">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i> 120 Reviews
               </p>
-              <p>160 SEK</p>
+              <div class="price">160 SEK</div>
             </figcaption>
           <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i></button>
           </figure>
         </a>
+
+
 
         <figure
           class="product"
@@ -378,6 +381,34 @@
           <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i></button>
         </figure>
       </section>
+
+      
+      <div class="cart">
+        <h3>Cart</h3>
+        <div class="list-cart">
+          <div class="product">
+            <img src="img/makeup/peripera-palette.jpg" alt="" />
+            <div class="content">
+              <div class="cart-name">
+                <strong>Peripera</strong> All Take Mood Palette
+              </div>
+              <div class="price">160 SEK | 1 product</div>
+            </div>
+            <div class="quantity">
+              <button>-</button>
+              <span class="value">3</span>
+              <button>+</button>
+            </div>
+          </div> 
+        </div> 
+        <div class="cart-buttons">
+          <div class="close">Close</div>
+          <div class="checkout">
+            <a href="shopping-cart.html">Checkout</a>
+          </div>
+        </div>
+      </div> 
+      
     </main>
   </body>
   <footer>

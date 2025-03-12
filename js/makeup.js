@@ -98,7 +98,8 @@ var brandPeripera = document.getElementById("Peripera");
 var brandRomnd = document.getElementById("rom&nd");
 var priceRange = document.getElementById("priceRange");
 var priceValue = document.getElementById("priceValue");
-var products = document.getElementsByClassName("product");
+var products = document.querySelectorAll(".products-container .product");
+
 
 // Function to filter products
 function filterProducts() {

@@ -46,10 +46,9 @@
 
 @media screen and (max-width: 1280px) {
   .marquee__group {
-    gap: 4rem; /* Reduce space between each span */
+    gap: 4rem; 
   }
   .marquee {
-    /* Animation duration for a smoother scroll */
     width: 100%;
     animation-duration: 20s;
   }
@@ -58,7 +57,7 @@
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Elements spread across */
+  justify-content: space-between;
 
   padding: 5px 15px;
   padding-top: 0;
