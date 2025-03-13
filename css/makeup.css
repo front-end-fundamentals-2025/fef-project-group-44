@@ -152,6 +152,14 @@ input[type="checkbox"] {
   }
 }
 
+@media (min-width: 1200px) {
+  .add-to-cart {
+    opacity: 0;
+    top: 57%;
+    right: 5%;
+  }
+}
+
 .cart {
   background-color: #fff;
   color: var(--navigation-color);

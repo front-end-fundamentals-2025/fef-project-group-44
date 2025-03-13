@@ -1,6 +1,8 @@
 // Navigation icons scaling
 
-const navigationElements = document.getElementsByClassName("navigation-user-options");
+const navigationElements = document.getElementsByClassName(
+  "navigation-user-options"
+);
 const socialElements = document.getElementsByClassName("social-links");
 
 // Loop through the navigation menus (in case there's more than one like now)
