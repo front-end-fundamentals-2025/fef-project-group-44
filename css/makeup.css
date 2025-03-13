@@ -108,16 +108,17 @@ input[type="checkbox"] {
 
 .totalQuantity {
   position: absolute;
-  top: 77px;
-  right: 57px;
+  top: 63px;
+  right: 53px;
   background: var(--primary-color);
   width: 15px;
   height: 15px;
   border-radius: 50%;
   color: var(--navigation-color);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: end;
+  align-items: end;
+  text-align: center;
   font-size: 0.6rem;
   font-weight: 600;
 }
@@ -144,15 +145,15 @@ input[type="checkbox"] {
   transition: 0.4s ease-in-out;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 800px) {
   .add-to-cart {
-    opacity: 1;
-    top: 43%;
+    opacity: 0;
+    top: 30%;
     right: 5%;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1290px) {
   .add-to-cart {
     opacity: 0;
     top: 57%;
@@ -160,82 +161,123 @@ input[type="checkbox"] {
   }
 }
 
+
+/* Cart Styling */
 .cart {
   background-color: #fff;
   color: var(--navigation-color);
   position: fixed;
   top: 0;
-  right: -400px; 
+  right: -400px; /* Initially hidden */
   width: 400px;
   height: 100vh;
   display: grid;
   grid-template-rows: 50px 1fr 50px;
-  gap: 20px;
-  transition: right 1s ease-in-out; 
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.4s ease-in-out;
 }
 
 .cart.open {
-  right: 0; 
+  right: 0;
 }
 
 .cart h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
   margin: 0;
-  padding: 20px;
+  border-bottom: 1px solid #ddd;
 }
 
-.cart .list-cart .product {
-  display: grid;
-  grid-template-columns: 50px 1fr 70px;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 20px;
-  font-size: 0.9rem;
-}
-
-.cart .list-cart img {
-  width: 120%;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.cart .list-cart .quantity {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-
-.cart .list-cart .product span {
-  display: block;
-  width: 50px;
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-.cart .list-cart .product button {
-  background-color: var(--secondary-color);
-  color: var(--navigation-color);
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.cart .list-cart .product button:hover {
-  background-color: var(--decoration-color);
-  font-weight: 550;
-}
-
+/* Scrollable Product List */
 .cart .list-cart {
   padding: 20px;
   overflow-y: auto;
 }
 
 .cart .list-cart::-webkit-scrollbar {
-  width: 0px;
+  width: 5px;
 }
 
+.cart .list-cart::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+
+/* Product Styling */
+.cart .list-cart .product {
+  display: grid;
+  grid-template-columns: 70px 1fr; /* Image on the left, details on the right */
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Ensure the product image stays on the left */
+.cart .list-cart img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Product Details (Everything on the right side) */
+.cart .list-cart .product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Quantity controls should be aligned horizontally */
+.cart .list-cart .quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust spacing */
+}
+
+
+.cart .list-cart .remove {
+  background-color: pink;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+  margin-bottom: 20px;
+  margin-left: 208px
+}
+
+.cart .list-cart .remove:hover {
+  background-color: #ff69b4; /* Slightly darker pink on hover */
+}
+
+/* Remove Button */
+.cart .list-cart .remove {
+  font-family: var(--primary-font);
+  color: var(--navigation-color);
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  margin-top: 20px;
+  font-weight: 400;
+  border-radius: 5px;
+}
+
+.cart .list-cart .remove:hover {
+  background-color:  var(--navigation-color);
+  color: #fff;
+  font-weight: 500;}
+
+/* Buttons Placement (Unchanged) */
 .cart .cart-buttons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

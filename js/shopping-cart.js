@@ -1,35 +1,34 @@
-document.addEventListener("DOMContentLoaded", () => {
-  let listCartHTML = document.querySelector(".list-cart");
-  let cartCount = document.querySelector(".totalQuantity");
-  let totalPriceHTML = document.querySelector(".total-price");
+let listCartHTML = document.querySelector(".list-cart");
+let cartCount = document.querySelector(".totalQuantity");
+let totalPriceHTML = document.querySelector(".total-price");
 
-  let listCart = JSON.parse(localStorage.getItem("listCart")) || [];
+let listCart = JSON.parse(localStorage.getItem("listCart")) || [];
 
-  function saveCart() {
-    localStorage.setItem("listCart", JSON.stringify(listCart));
+function saveCart() {
+  localStorage.setItem("listCart", JSON.stringify(listCart));
+}
+
+function updateTotalPrice() {
+  let totalPrice = listCart.reduce(
+    (sum, product) => sum + product.price * product.quantity,
+    0
+  );
+  totalPriceHTML.innerText = `Total: ${totalPrice} SEK`;
+}
+
+function addCartToHTML() {
+  if (!listCartHTML) return;
+  listCartHTML.innerHTML = "";
+
+  if (listCart.length === 0) {
+    listCartHTML.innerHTML = "<p>Your cart is empty</p>";
+    return;
   }
 
-  function updateTotalPrice() {
-    let totalPrice = listCart.reduce(
-      (sum, product) => sum + product.price * product.quantity,
-      0
-    );
-    totalPriceHTML.innerText = `Total: ${totalPrice} SEK`;
-  }
-
-  function addCartToHTML() {
-    if (!listCartHTML) return;
-    listCartHTML.innerHTML = "";
-
-    if (listCart.length === 0) {
-      listCartHTML.innerHTML = "<p>Your cart is empty.</p>";
-      return;
-    }
-
-    listCart.forEach((product, index) => {
-      let newCartItem = document.createElement("div");
-      newCartItem.classList.add("cart-item");
-      newCartItem.innerHTML = `
+  listCart.forEach((product, index) => {
+    let newCartItem = document.createElement("div");
+    newCartItem.classList.add("cart-item");
+    newCartItem.innerHTML = `
               <img src="${product.image}" alt="${product.name}">
               <div class="cart-content">
                   <strong>${product.name}</strong>
@@ -41,42 +40,41 @@ document.addEventListener("DOMContentLoaded", () => {
                   </div>
               </div>
           `;
-      listCartHTML.appendChild(newCartItem);
-    });
+    listCartHTML.appendChild(newCartItem);
+  });
 
-    updateTotalPrice();
-    attachCartEventListeners();
-  }
+  updateTotalPrice();
+  attachCartEventListeners();
+}
 
-  function changeQuantity(index, type) {
-    if (type === "+") {
-      listCart[index].quantity++;
-    } else if (type === "-") {
-      listCart[index].quantity--;
-      if (listCart[index].quantity <= 0) {
-        listCart.splice(index, 1);
-      }
+function changeQuantity(index, type) {
+  if (type === "+") {
+    listCart[index].quantity++;
+  } else if (type === "-") {
+    listCart[index].quantity--;
+    if (listCart[index].quantity <= 0) {
+      listCart.splice(index, 1);
     }
-
-    saveCart();
-    addCartToHTML();
   }
 
-  function attachCartEventListeners() {
-    document.querySelectorAll(".increase").forEach((button) => {
-      button.addEventListener("click", function () {
-        let index = this.getAttribute("data-index");
-        changeQuantity(index, "+");
-      });
-    });
-
-    document.querySelectorAll(".decrease").forEach((button) => {
-      button.addEventListener("click", function () {
-        let index = this.getAttribute("data-index");
-        changeQuantity(index, "-");
-      });
-    });
-  }
-
+  saveCart();
   addCartToHTML();
-});
+}
+
+function attachCartEventListeners() {
+  document.querySelectorAll(".increase").forEach((button) => {
+    button.addEventListener("click", function () {
+      let index = this.getAttribute("data-index");
+      changeQuantity(index, "+");
+    });
+  });
+
+  document.querySelectorAll(".decrease").forEach((button) => {
+    button.addEventListener("click", function () {
+      let index = this.getAttribute("data-index");
+      changeQuantity(index, "-");
+    });
+  });
+}
+
+addCartToHTML();

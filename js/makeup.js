@@ -180,7 +180,6 @@ filterProducts();
 // Cart Functionality
 document.addEventListener("DOMContentLoaded", () => {
   let cart = document.querySelector(".cart");
-  let iconCart = document.querySelector(".fa-bag-shopping");
   let close = document.querySelector(".close");
   let listCartHTML = document.querySelector(".list-cart");
   let cartCount = document.querySelector(".totalQuantity");
@@ -210,18 +209,19 @@ document.addEventListener("DOMContentLoaded", () => {
         let newCartItem = document.createElement("div");
         newCartItem.classList.add("cart-item");
         newCartItem.innerHTML = `
-                  <img src="${product.image}" alt="">
-                  <div class="cart-content">
-                      <strong>${product.name}</strong>
-                      <p>${product.price} SEK</p>
-                      <div class="quantity-controls">
-                          <button class="decrease" data-index="${index}">-</button>
-                          <span class="value">${product.quantity}</span>
-                          <button class="increase" data-index="${index}">+</button>
-                      </div>
-                  </div>
-                  <button class="remove" data-index="${index}">Remove</button>
-              `;
+        <img src="${product.image}" alt="">
+        <div class="cart-content">
+            <strong>${product.name}</strong>
+            <p>${product.price} SEK</p>
+            <div class="quantity-controls">
+                <button class="decrease" data-index="${index}">-</button>
+                <span class="value">${product.quantity}</span>
+                <button class="increase" data-index="${index}">+</button>
+                <button class="remove" data-index="${index}">Remove</button> <!-- Moved inside here -->
+            </div>
+        </div>
+    `;
+
         listCartHTML.appendChild(newCartItem);
       });
     }
@@ -299,13 +299,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       saveCart();
       addCartToHTML();
-      cart.style.right = "0"; // Show the cart when an item is added
+      cart.classList.add("open");
     });
   });
 
   // Close cart functionality
   close.addEventListener("click", function () {
-    cart.style.right = "-100%";
+    cart.classList.remove("open");
   });
 
   // Initial cart render and update
