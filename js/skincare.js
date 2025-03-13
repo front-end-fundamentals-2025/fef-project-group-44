@@ -1,3 +1,90 @@
+// Navigation icons scaling
+
+const navigationElements = document.getElementsByClassName(
+  "navigation-user-options"
+);
+const socialElements = document.getElementsByClassName("social-links");
+
+// Loop through the navigation menus (in case there's more than one like now)
+for (let i = 0; i < navigationElements.length; i++) {
+  // Get all icons inside the current navigation menu
+  const navigationIcons = navigationElements[i].getElementsByTagName("i");
+
+  // Scale when the mouse is over
+  for (let j = 0; j < navigationIcons.length; j++) {
+    navigationIcons[j].addEventListener("mouseover", function () {
+      this.style.transform = "scale(1.2)";
+    });
+
+    // Unscale back to the initial size when the mouse leaves
+    navigationIcons[j].addEventListener("mouseleave", function () {
+      this.style.transform = "scale(1)";
+    });
+  }
+}
+
+// Search Bar
+const searchIcon = document.querySelector(".search-icon");
+const searchInput = document.querySelector(".search-input");
+
+// Function to expand the search input
+function expandSearch() {
+  searchInput.style.width = "150px";
+  searchInput.style.opacity = "1";
+  searchInput.style.padding = "5px 10px";
+}
+
+// Function to collapse the search input
+function collapseSearch() {
+  // If the input is empty, collapse it back to small size
+  if (searchInput.value === "") {
+    searchInput.style.width = "0"; // Make it smaller
+    searchInput.style.opacity = "0"; // Make it invisible
+    searchInput.style.padding = "5px"; // Reset the padding
+  }
+}
+
+// When the user clicks the search icon, toggle the search input size
+searchIcon.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent form submission (page reload)
+  // The idea to use "stopPropagation" was taken from this link: https://www.w3schools.com/jsref/event_stoppropagation.asp
+  event.stopPropagation(); // Prevent the click from collapsing the search input
+
+  if (searchInput.style.width === "0px" || searchInput.style.width === "") {
+    expandSearch(); // Expand if it's collapsed
+  } else {
+    collapseSearch(); // Collapse if it's already expanded
+  }
+});
+
+// When the user clicks outside the search area, collapse the input
+document.addEventListener("click", function (event) {
+  // If the click is not inside the search icon or input, collapse the input
+  if (
+    !searchIcon.contains(event.target) &&
+    !searchInput.contains(event.target)
+  ) {
+    collapseSearch();
+  }
+});
+
+// Search Bar Functionality
+
+// The way how to make working search bar was learnt from this video: https://www.youtube.com/watch?v=ifi6dXOl3g4&list=LL&index=5&t=299s&ab_channel=Treehouse
+const nameSearch = document.getElementById("nameSearch");
+nameSearch.addEventListener("keyup", (e) => {
+  let currentValue = e.target.value.toLowerCase();
+  let names = document.querySelectorAll("p.product-name");
+  names.forEach((name) => {
+    let product = name.closest("figure"); // Find the closest figure (product)
+    if (name.textContent.toLowerCase().includes(currentValue)) {
+      product.style.display = "block"; // Show the product if it matches
+    } else {
+      product.style.display = "none";
+    }
+  });
+});
+
 //FILTERS
 // Get elements by their IDs
 var serums = document.getElementById('serums');
