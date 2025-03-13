@@ -135,6 +135,12 @@ main {
 
 /* Continue Shopping Button */
 
+.button-container {
+  display: flex;
+  gap: 28rem; 
+}
+
+
 .back-to {
   background-color: #fff;
   display: inline-block;
