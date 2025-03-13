@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", function () {
       let productElement = this.closest(".product");
       let productId = productElement.dataset.id;
-      let productName = productElement.querySelector("strong").innerText;
+      let productName = productElement.querySelector(".product-name").innerText;
       let productPrice = productElement.dataset.price;
       let productImage = productElement.querySelector("img").src;
 

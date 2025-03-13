@@ -11,7 +11,11 @@ body {
 /* The next 2 lines were adapted from this website: https://www.geeksforgeeks.org/how-to-change-the-color-of-range-slider-in-css/ */
 input[type="range"] {
   width: 200px;
-  accent-color: pink;
+  accent-color: #bcd6ed;
+}
+
+input[type="checkbox"] {
+  accent-color: #c5e6ed;
 }
 
 /* Filter Section Styling */

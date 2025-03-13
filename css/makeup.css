@@ -161,7 +161,6 @@ input[type="checkbox"] {
   }
 }
 
-
 /* Cart Styling */
 .cart {
   background-color: #fff;
@@ -206,18 +205,16 @@ input[type="checkbox"] {
   border-radius: 10px;
 }
 
-
 /* Product Styling */
 .cart .list-cart .product {
   display: grid;
-  grid-template-columns: 70px 1fr; /* Image on the left, details on the right */
+  grid-template-columns: 70px 1fr; 
   align-items: center;
   gap: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #eee;
 }
 
-/* Ensure the product image stays on the left */
 .cart .list-cart img {
   width: 100%;
   height: auto;
@@ -225,7 +222,7 @@ input[type="checkbox"] {
   border-radius: 5px;
 }
 
-/* Product Details (Everything on the right side) */
+/* Product Details */
 .cart .list-cart .product-details {
   display: flex;
   flex-direction: column;
@@ -233,51 +230,53 @@ input[type="checkbox"] {
   gap: 5px;
 }
 
-/* Quantity controls should be aligned horizontally */
 .cart .list-cart .quantity-controls {
   display: flex;
   align-items: center;
-  gap: 10px; /* Adjust spacing */
+  gap: 10px;
 }
 
-
-.cart .list-cart .remove {
-  background-color: pink;
-  color: white;
+.cart .list-cart .quantity-controls button {
+  background-color: var(--secondary-color);
+  color: var(--navigation-color);
+  border: none;
   padding: 5px 8px;
   border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cart .list-cart .quantity-controls button:hover {
+  background-color: var(--decoration-color);
+  font-weight: 550;
+}
+
+/* Remove Button */
+.cart .list-cart .remove {
+  background-color: var(--secondary-color);
+  color: var(--navigation-color);
+  padding: 5px 8px;
+  border-radius: 3px;
+  font-family: var(--primary-font);
   font-size: 0.8rem;
   cursor: pointer;
   border: none;
   transition: background-color 0.3s ease-in-out;
   margin-bottom: 20px;
-  margin-left: 208px
-}
-
-.cart .list-cart .remove:hover {
-  background-color: #ff69b4; /* Slightly darker pink on hover */
-}
-
-/* Remove Button */
-.cart .list-cart .remove {
-  font-family: var(--primary-font);
-  color: var(--navigation-color);
-  border: none;
-  cursor: pointer;
-  font-size: 0.8rem;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
+  margin-left: 208px;
   margin-top: 20px;
   font-weight: 400;
   border-radius: 5px;
 }
 
 .cart .list-cart .remove:hover {
-  background-color:  var(--navigation-color);
-  color: #fff;
-  font-weight: 500;}
+  background-color: var(--decoration-color-darker);
+  color: var(--navigation-color);
+  font-weight: 500;
+}
 
-/* Buttons Placement (Unchanged) */
+/* Buttons Placement */
 .cart .cart-buttons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
