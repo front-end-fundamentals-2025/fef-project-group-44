@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/cart.css" />
-    <script src="js/shopping-cart.js" defer></script>
+    <link rel="stylesheet" href="css/contact-us.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,6 +33,7 @@
       <a href="main.html">
         <p class="logo-name">Strawberry Kiss</p>
       </a>
+
       <nav>
         <ul class="navigation-pages">
           <a href="makeup.html">
@@ -49,20 +49,14 @@
         <ul class="navigation-user-options">
           <li class="search-container">
             <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input
-              type="text"
-              id="nameSearch"
-              class="search-input"
-              placeholder="Search..."
-            />
+            <input type="text" class="search-input" placeholder="Search..." />
           </li>
-          <li><i class="fa-regular fa-heart"></i></li>
-          <div class="iconCart">
-            <a href="shopping-cart.html">
-              <li><i class="fa-solid fa-bag-shopping"></i></li>
-              <div class="totalQuantity"></div>
-            </a>
-          </div>
+          <a href="favorites.html">
+            <li><i class="fa-regular fa-heart"></i></li>
+          </a>
+          <a href="shopping-cart.html">
+            <li><i class="fa-solid fa-bag-shopping"></i></li
+          ></a>
           <a href="login.html">
             <li><i class="fa-regular fa-circle-user"></i></li>
           </a>
@@ -70,14 +64,21 @@
       </nav>
     </header>
     <main>
-      <div class="cart">
-        <h2>Your Shopping Cart</h2>
-        <div class="list-cart"></div>
-        <h3 class="total-price">Total: 0 SEK</h3>
-        <a href="main.html">
-          <button class="back-to">← Continue Shopping</button>
-        </a>
-      </div>
+      <section class="contact-section">
+        <section class="contact-form">
+          <h2>Contact Us</h2>
+          <form>
+            <!-- The idea to use "required" was taken from this link: https://www.w3schools.com/TAGs/att_input_required.asp -->
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Enter Your Email" required />
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send ✈️</button>
+          </form>
+        </section>
+        <section class="contact-image">
+          <img src="img/contact-us-img.jpg" alt="Contact Illustration" />
+        </section>
+      </section>
     </main>
   </body>
   <footer>
