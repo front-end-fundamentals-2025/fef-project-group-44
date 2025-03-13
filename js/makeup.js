@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="decrease" data-index="${index}">-</button>
                 <span class="value">${product.quantity}</span>
                 <button class="increase" data-index="${index}">+</button>
-                <button class="remove" data-index="${index}">Remove</button> <!-- Moved inside here -->
+                <button class="remove" data-index="${index}">Remove</button> 
             </div>
         </div>
     `;
