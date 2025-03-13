@@ -1,0 +1,157 @@
+/* Global Styles  */
+* {
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  color: var(--navigation-color);
+}
+
+main {
+  background-color: var(--secondary-color);
+  padding: 1px;
+}
+
+/* Icon Cart */
+.iconCart {
+  top: 20px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.iconCart a {
+  font-family: var(--primary-font);
+  color: var(--navigation-color);
+  text-decoration: none;
+  position: relative;
+}
+
+.iconCart i {
+  font-size: 1.2rem;
+}
+
+/* Cart Container */
+.cart {
+  font-family: var(--primary-font);
+  color: var(--navigation-color);
+  max-width: 800px;
+  margin: 100px auto 100px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+  font-family: var(--primary-font);
+  color: var(--navigation-color);
+  font-size: 1.7rem;
+  margin-bottom: 20px0;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+}
+
+/* Cart List*/
+.list-cart {
+  width: 100%;
+  min-height: 100px; /* Ensures some space even if empty */
+}
+
+.list-cart p {
+  text-align: center;
+  color: var(--navigation-color);
+  font-size: 16px;
+}
+
+/* Individual Cart Item */
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--navigation-color);
+  padding-bottom: 20px;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+
+/* Cart Content */
+.cart-content {
+  flex: 1;
+}
+
+.cart-content strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.cart-content p {
+  font-size: 16px;
+  color: var(--navigation-color);
+  margin-bottom: 10px;
+}
+
+/* Quantity buttons */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-controls button {
+  border: none;
+  background-color: var(--secondary-color);
+  padding: 6px 10px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.quantity-controls button:hover {
+  background-color: var(--decoration-color);
+  font-weight: 550;
+}
+
+.quantity-controls .value {
+  min-width: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Total Price*/
+.total-price {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Continue Shopping Button */
+
+.back-to {
+  background-color: #fff;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  border: 1px solid var(--navigation-color);
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+}
+
+.back-to:hover {
+  background-color: var(--navigation-color);
+  color: #fff;
+}
+
+footer {
+  margin-top: 100px;
+}
