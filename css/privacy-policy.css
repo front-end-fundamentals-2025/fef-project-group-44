@@ -1,41 +1,86 @@
+body {
+  background-color: var(--secondary-color); 
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+header {
+  background-color: #ffff;
+  padding-bottom: 20px;
+}
+
 main {
-    font-family: var(--primary-font); 
-    color: var(--navigation-color); 
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    color: var(--decoration-color-darker); 
-    font-size: 1.5rem;
-    margin-top: 30px;
-  }
-  
-  p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-  }
-  
-  ul {
-    margin-left: 20px;;
-  }
-  
-  li {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 10px;
-    list-style: disc;
-  }
-  
-  a {
-    color: var(--navigation-color);
-    text-decoration: none;
-  }
-  
+  font-family: var(--primary-font); 
+  color: var(--navigation-color); 
+  max-width: 1000px;
+  margin: 50px auto; 
+  padding: 30px;
+  background-color: #ffffff; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: var(--nagivation-color); 
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.update {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: start;
+}
+
+h2 {
+  color: var(--decoration-color-darker); 
+  font-size: 1.5rem;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+.policy-list {
+  margin-left: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  list-style: disc;
+}
+
+a {
+  color: var(--navigation-color);
+  text-decoration: none;
+}
+
+.about-us-first-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+  flex-direction: row; /* Ensures image stays on the left */
+}
+
+img {
+  width: 28%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.our-story-text {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
   
   
