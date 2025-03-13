@@ -135,3 +135,21 @@ function timer() {
 
 const countdownInterval = setInterval(timer, 1000);
 timer();
+
+// Function to update cart count on all pages
+function updateCartCount() {
+  let cartCount = document.querySelector(".totalQuantity"); // Select the shopping bag counter
+  let listCart = JSON.parse(localStorage.getItem("listCart")) || []; // Get cart data from localStorage
+
+  // Calculate total quantity
+  let totalQuantity = listCart.reduce((sum, product) => sum + product.quantity, 0);
+
+  // Update the cart count in the shopping bag icon
+  if (cartCount) {
+    cartCount.innerText = totalQuantity;
+    cartCount.style.display = totalQuantity > 0 ? "flex" : "none"; // Hide if cart is empty
+  }
+}
+
+// Call this function on page load to ensure the cart count is updated
+document.addEventListener("DOMContentLoaded", updateCartCount);

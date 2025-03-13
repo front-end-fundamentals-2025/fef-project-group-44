@@ -429,3 +429,20 @@ ul {
 .social-links li a:not(:last-child) {
   margin-right: 1rem;
 }
+
+.totalQuantity {
+  position: absolute;
+  top: 107px;
+  right: 53px;
+  background: var(--primary-color);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  color: var(--navigation-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
