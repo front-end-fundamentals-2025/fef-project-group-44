@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/makeup.css" />
     <script src="js/makeup.js" defer></script>
+    <script src="js/shopping-cart.js" ></script>
+
     <title>Makeup</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -72,8 +74,8 @@
         </ul>
       </nav>
     </header>
-    <main 
-    class="makeup-container">
+    <main
+     class="makeup-container">
       <section class="filter-section">
         <h2>Makeup</h2>
         <section class="filter-group">
@@ -148,6 +150,7 @@
         <a href="palette.html">
           <figure
             class="product"
+            data-id="1"
             data-category="eyes"
             data-stock="in-stock"
             data-brand="Peripera"
@@ -164,20 +167,23 @@
                 <strong>Peripera</strong> All Take Mood Palette
               </div>
               <p class="product-description">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i> 120 Reviews
               </p>
               <div class="price">160 SEK</div>
             </figcaption>
-          <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i></button>
+            <button class="add-to-cart">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </button>
           </figure>
         </a>
 
-
-
         <figure
           class="product"
+          data-id="2"
           data-category="lips"
           data-stock="in-stock"
           data-brand="ETUDE"
@@ -196,7 +202,9 @@
             </p>
             <p>135 SEK</p>
           </figcaption>
-          <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i></button>
+          <button class="add-to-cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </button>
         </figure>
 
         <figure
@@ -219,7 +227,9 @@
             </p>
             <p>220 SEK</p>
           </figcaption>
-          <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i></button>
+          <button class="add-to-cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </button>
         </figure>
 
         <figure
@@ -242,7 +252,9 @@
             </p>
             <p>127 SEK</p>
           </figcaption>
-          <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i></button>
+          <button class="add-to-cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </button>
         </figure>
 
         <figure
@@ -263,7 +275,9 @@
             </p>
             <p>260 SEK</p>
           </figcaption>
-          <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i></button>
+          <button class="add-to-cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </button>
         </figure>
 
         <figure
@@ -286,7 +300,9 @@
             </p>
             <p>246 SEK</p>
           </figcaption>
-          <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i></button>
+          <button class="add-to-cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </button>
         </figure>
 
         <figure
@@ -309,7 +325,9 @@
             </p>
             <p>140 SEK</p>
           </figcaption>
-          <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i></button>
+          <button class="add-to-cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </button>
         </figure>
 
         <figure
@@ -332,7 +350,9 @@
             </p>
             <p>300 SEK</p>
           </figcaption>
-          <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i></button>
+          <button class="add-to-cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </button>
         </figure>
 
         <figure
@@ -355,7 +375,9 @@
             </p>
             <p>258 SEK</p>
           </figcaption>
-          <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i></button>
+          <button class="add-to-cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </button>
         </figure>
 
         <figure
@@ -378,11 +400,12 @@
             </p>
             <p>230 SEK</p>
           </figcaption>
-          <button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i></button>
+          <button class="add-to-cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </button>
         </figure>
       </section>
 
-      
       <div class="cart">
         <h2>Cart</h2>
         <div class="list-cart">
@@ -399,16 +422,15 @@
               <span class="value">3</span>
               <button>+</button>
             </div>
-          </div> 
-        </div> 
+          </div>
+        </div>
         <div class="cart-buttons">
           <div class="close">Close</div>
           <div class="checkout">
             <a href="shopping-cart.html">Checkout</a>
           </div>
         </div>
-      </div> 
-      
+      </div>
     </main>
   </body>
   <footer>

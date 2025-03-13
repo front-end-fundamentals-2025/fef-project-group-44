@@ -15,9 +15,8 @@ input[type="range"] {
 }
 
 input[type="checkbox"] {
-  accent-color: pink; 
+  accent-color: pink;
 }
-
 
 /* Filter Section Styling */
 .filter-section {
@@ -107,10 +106,10 @@ input[type="checkbox"] {
   }
 }
 
-.totalQuantity { 
+.totalQuantity {
   position: absolute;
-  top: 77px;      
-  right: 57px;       
+  top: 77px;
+  right: 57px;
   background: var(--primary-color);
   width: 15px;
   height: 15px;
@@ -123,18 +122,18 @@ input[type="checkbox"] {
   font-weight: 600;
 }
 
-.add-to-cart{
+.add-to-cart {
   background-color: white;
   color: var(--navigation-color);
   border: none;
-  padding: 5px 10px;
+  padding: 5px 8px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.9rem;
   transition: background-color 0.3s ease-in-out;
   position: absolute;
-  top: 57%;
-  left: 83%;
+  top: 43%;
+  right: 5%;
   align-items: center;
   opacity: 0;
 }
@@ -145,18 +144,30 @@ input[type="checkbox"] {
   transition: 0.4s ease-in-out;
 }
 
+@media (max-width: 768px) {
+  .add-to-cart {
+    opacity: 1;
+    top: 43%;
+    right: 5%;
+  }
+}
+
 .cart {
   background-color: #fff;
   color: var(--navigation-color);
   position: fixed;
   top: 0;
-  right: -100%;
+  right: -400px; 
   width: 400px;
   height: 100vh;
   display: grid;
   grid-template-rows: 50px 1fr 50px;
   gap: 20px;
-  transition: right 1s ease-in-out;
+  transition: right 1s ease-in-out; 
+}
+
+.cart.open {
+  right: 0; 
 }
 
 .cart h2 {
@@ -205,9 +216,9 @@ input[type="checkbox"] {
 
 .cart .list-cart .product button:hover {
   background-color: var(--decoration-color);
-  font-weight: 600;
+  font-weight: 550;
 }
- 
+
 .cart .list-cart {
   padding: 20px;
   overflow-y: auto;
@@ -236,6 +247,7 @@ input[type="checkbox"] {
 
 .cart .cart-buttons div:hover {
   background-color: var(--decoration-color);
+  font-weight: 550;
 }
 
 .checkout a {

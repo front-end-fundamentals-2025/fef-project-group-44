@@ -100,7 +100,6 @@ var priceRange = document.getElementById("priceRange");
 var priceValue = document.getElementById("priceValue");
 var products = document.querySelectorAll(".products-container .product");
 
-
 // Function to filter products
 function filterProducts() {
   // Initializing an empty array for each category (eyes, face, lips) that will store the selected categories
@@ -175,3 +174,139 @@ brandRomnd.addEventListener("change", filterProducts);
 
 // Initial filter on page load
 filterProducts();
+
+// Cart Functionality
+document.addEventListener("DOMContentLoaded", () => {
+  let cart = document.querySelector(".cart");
+  let iconCart = document.querySelector(".fa-bag-shopping");
+  let close = document.querySelector(".close");
+  let listCartHTML = document.querySelector(".list-cart");
+  let cartCount = document.querySelector(".totalQuantity");
+
+  let listCart = JSON.parse(localStorage.getItem("listCart")) || [];
+
+  // Save cart to localStorage
+  function saveCart() {
+    localStorage.setItem("listCart", JSON.stringify(listCart));
+  }
+
+  // Update cart count in header
+  function updateCartCount() {
+    let totalQuantity = listCart.reduce(
+      (sum, product) => sum + product.quantity,
+      0
+    );
+    cartCount.innerText = totalQuantity;
+    cartCount.style.display = totalQuantity > 0 ? "block" : "none";
+  }
+
+  // Add cart items to the cart popup
+  function addCartToHTML() {
+    listCartHTML.innerHTML = "";
+    if (listCart.length > 0) {
+      listCart.forEach((product, index) => {
+        let newCartItem = document.createElement("div");
+        newCartItem.classList.add("cart-item");
+        newCartItem.innerHTML = `
+                  <img src="${product.image}" alt="">
+                  <div class="cart-content">
+                      <strong>${product.name}</strong>
+                      <p>${product.price} SEK</p>
+                      <div class="quantity-controls">
+                          <button class="decrease" data-index="${index}">-</button>
+                          <span class="value">${product.quantity}</span>
+                          <button class="increase" data-index="${index}">+</button>
+                      </div>
+                  </div>
+                  <button class="remove" data-index="${index}">Remove</button>
+              `;
+        listCartHTML.appendChild(newCartItem);
+      });
+    }
+
+    updateCartCount();
+    attachCartEventListeners();
+  }
+
+  // Change quantity (increase or decrease)
+  function changeQuantity(index, type) {
+    if (type === "+") {
+      listCart[index].quantity++;
+    } else if (type === "-") {
+      listCart[index].quantity--;
+      if (listCart[index].quantity <= 0) {
+        listCart.splice(index, 1);
+      }
+    }
+
+    saveCart();
+    addCartToHTML();
+  }
+
+  // Attach event listeners for quantity changes and remove button
+  function attachCartEventListeners() {
+    document.querySelectorAll(".increase").forEach((button) => {
+      button.addEventListener("click", function () {
+        let index = this.getAttribute("data-index");
+        changeQuantity(index, "+");
+      });
+    });
+
+    document.querySelectorAll(".decrease").forEach((button) => {
+      button.addEventListener("click", function () {
+        let index = this.getAttribute("data-index");
+        changeQuantity(index, "-");
+      });
+    });
+
+    document.querySelectorAll(".remove").forEach((button) => {
+      button.addEventListener("click", function () {
+        let index = this.getAttribute("data-index");
+        listCart.splice(index, 1);
+        saveCart();
+        addCartToHTML();
+      });
+    });
+  }
+
+  // Add to cart event (on "Add to Cart" button click)
+  document.querySelectorAll(".add-to-cart").forEach((button) => {
+    button.addEventListener("click", function () {
+      let productElement = this.closest(".product");
+      let productId = productElement.dataset.id;
+      let productName = productElement.querySelector("strong").innerText;
+      let productPrice = productElement.dataset.price;
+      let productImage = productElement.querySelector("img").src;
+
+      let existingProduct = listCart.find(
+        (product) => product.id === productId
+      );
+
+      if (!existingProduct) {
+        let newProduct = {
+          id: productId,
+          name: productName,
+          price: productPrice,
+          image: productImage,
+          quantity: 1,
+        };
+        listCart.push(newProduct);
+      } else {
+        existingProduct.quantity++;
+      }
+
+      saveCart();
+      addCartToHTML();
+      cart.style.right = "0"; // Show the cart when an item is added
+    });
+  });
+
+  // Close cart functionality
+  close.addEventListener("click", function () {
+    cart.style.right = "-100%";
+  });
+
+  // Initial cart render and update
+  addCartToHTML();
+  updateCartCount();
+});

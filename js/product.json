@@ -1,0 +1,17 @@
+[
+    {
+      "id": "1",
+      "name": "Peripera All Take Mood Palette",
+      "price": 160,
+      "image": "img/makeup/peripera-palette.jpg",
+      "category": "eyes"
+    },
+    {
+      "id": "2",
+      "name": "ETUDE Fixing Long-lasting Tint",
+      "price": 135,
+      "image": "img/makeup/etude-tint.jpg",
+      "category": "lips"
+    }
+  ]
+  
