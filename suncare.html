@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/suncare.css" />
-    <script src="js/main.js" defer></script>
     <script src="js/suncare.js" defer></script>
     <title>Suncare</title>
 
@@ -56,9 +55,15 @@
           </a>
         </ul>
         <ul class="navigation-user-options">
-          <a href="">
-            <li><i class="fa-solid fa-magnifying-glass"></i></li>
-          </a>
+          <li class="search-container">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input
+              type="text"
+              id="nameSearch"
+              class="search-input"
+              placeholder="Search..."
+            />
+          </li>
           <li><i class="fa-regular fa-heart"></i></li>
           <a href="shopping-cart.html">
             <li><i class="fa-solid fa-bag-shopping"></i></li
@@ -152,7 +157,9 @@
             <img class="product-1" src="img/suncare/blancow.jpg" alt="" />
             <img class="product-2" src="img/suncare/blancow-2.jpg" alt="" />
             <figcaption>
-              <p><strong>Blancow</strong> Soft Finish Pink Sun Stick</p>
+              <p class="product-name">
+                <strong>Blancow</strong> Soft Finish Pink Sun Stick
+              </p>
               <p class="product-description">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
                 ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -173,7 +180,9 @@
           <img class="product-1" src="img/suncare/sun-cusion.jpg" alt="" />
           <img class="product-2" src="img/suncare/cush-2.jpg" alt="" />
           <figcaption>
-            <p><strong>Blancow</strong> Safety Soothing Sun Cushion</p>
+            <p class="product-name">
+              <strong>Blancow</strong> Safety Soothing Sun Cushion
+            </p>
             <p class="product-description">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
               ><i class="fa-solid fa-star"></i
@@ -193,7 +202,9 @@
           <img class="product-1" src="img/suncare/cosrx-aloe.jpg" alt="" />
           <img class="product-2" src="img/suncare/cosrx-2.jpg" alt="" />
           <figcaption>
-            <p><strong>COSRX</strong> Aloe 54.2 Aqua Tone-up Sunscreen</p>
+            <p class="product-name">
+              <strong>COSRX</strong> Aloe 54.2 Aqua Tone-up Sunscreen
+            </p>
             <p class="product-description">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
               ><i class="fa-solid fa-star"></i
@@ -213,7 +224,7 @@
           <img class="product-1" src="img/suncare/etude.jpg" alt="" />
           <img class="product-2" src="img/suncare/etude-2.jpg" alt="" />
           <figcaption>
-            <p>
+            <p class="product-name">
               <strong>ETUDE</strong> Soonjung Director's Mineral Filter Sun
               Cream
             </p>
@@ -236,7 +247,9 @@
           <img class="product-1" src="img/suncare/cent.jpeg" alt="" />
           <img class="product-2" src="img/suncare/cent-2.jpg" alt="" />
           <figcaption>
-            <p><strong>Centella</strong> Hyalu-Cica Water-Fit Sun Serum</p>
+            <p class="product-name">
+              <strong>Centella</strong> Hyalu-Cica Water-Fit Sun Serum
+            </p>
             <p class="product-description">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
               ><i class="fa-solid fa-star"></i
@@ -256,7 +269,9 @@
           <img class="product-1" src="img/suncare/cent-stick.jpg" alt="" />
           <img class="product-2" src="img/suncare/cent-stick-2.jpg" alt="" />
           <figcaption>
-            <p><strong>Centella</strong> Hyalu-Cica Silky-Fit Sun Stick</p>
+            <p class="product-name">
+              <strong>Centella</strong> Hyalu-Cica Silky-Fit Sun Stick
+            </p>
             <p class="product-description">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
               ><i class="fa-solid fa-star"></i
@@ -276,9 +291,9 @@
           <img class="product-1" src="img/suncare/etude-tone.jpg" alt="" />
           <img class="product-2" src="img/suncare/etude-tone-2.jpg" alt="" />
           <figcaption>
-            <p>
+            <p class="product-name">
               <strong>ETUDE</strong> Soonjung Director's Tone-up Correcting Sun
-              Cream/p>
+              Cream
             </p>
             <p class="product-description">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -299,7 +314,9 @@
           <img class="product-1" src="img/suncare/cos-cush.jpg" alt="" />
           <img class="product-2" src="img/suncare/cos-cush-2.jpg" alt="" />
           <figcaption>
-            <p><strong>COSRX</strong> Full Fit Propolis Ampoule Cushion</p>
+            <p class="product-name">
+              <strong>COSRX</strong> Full Fit Propolis Ampoule Cushion
+            </p>
             <p class="product-description">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
               ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -319,7 +336,7 @@
           <img class="product-1" src="img/suncare/joseon.jpg" alt="" />
           <img class="product-2" src="img/suncare/joseon-2.jpg" alt="" />
           <figcaption>
-            <p>
+            <p class="product-name">
               <strong>Beauty of Joseon</strong> Rice Probiotics Sunscreen Spf
             </p>
             <p class="product-description">
@@ -341,7 +358,7 @@
           <img class="product-1" src="img/suncare/joseon-stick.jpg" alt="" />
           <img class="product-2" src="img/suncare/jo-stick-2.jpg" alt="" />
           <figcaption>
-            <p>
+            <p class="product-name">
               <strong>Beauty of Joseon</strong> Matte Sun Stick: Mugwort +
               Camelia
             </p>
