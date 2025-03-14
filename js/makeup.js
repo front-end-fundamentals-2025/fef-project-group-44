@@ -282,23 +282,31 @@ document.addEventListener("DOMContentLoaded", () => {
       let productPrice = productElement.dataset.price;
       let productImage = productElement.querySelector("img").src;
 
-      let existingProduct = listCart.find(
-        (product) => product.id === productId
-      );
+      // Check if the product is already in the cart
+      let existingProduct = null;
 
-      if (!existingProduct) {
+      for (let i = 0; i < listCart.length; i++) {
+        if (listCart[i].id === productId) {
+          existingProduct = listCart[i];
+          // The idea to use break was taken from this link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break
+        }
+      }
+
+      // If the product is not in the cart, add it
+      if (existingProduct === null) {
         let newProduct = {
           id: productId,
           name: productName,
           price: productPrice,
           image: productImage,
-          quantity: 1,
+          quantity: 1, // Set initial quantity to 1
         };
         listCart.push(newProduct);
-      } else {
+      }
+      // If the product already exists, increase its quantity
+      else {
         existingProduct.quantity++;
       }
-
       saveCart();
       addCartToHTML();
       cart.classList.add("open");
