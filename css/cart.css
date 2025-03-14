@@ -1,4 +1,4 @@
-/* Global Styles  */
+/* Base Styles */
 * {
   box-sizing: border-box;
   font-family: var(--primary-font);
@@ -7,10 +7,9 @@
 
 main {
   background-color: var(--secondary-color);
-  padding: 1px;
+  padding: 10px;
 }
 
-/* Icon Cart */
 .iconCart {
   top: 20px;
   right: 30px;
@@ -29,12 +28,11 @@ main {
   font-size: 1.2rem;
 }
 
-/* Cart Container */
 .cart {
   font-family: var(--primary-font);
   color: var(--navigation-color);
   max-width: 800px;
-  margin: 100px auto 100px;
+  margin: 60px auto;
   background-color: #fff;
   padding: 20px;
   border-radius: 6px;
@@ -42,8 +40,6 @@ main {
 }
 
 .cart h2 {
-  font-family: var(--primary-font);
-  color: var(--navigation-color);
   font-size: 1.7rem;
   margin-bottom: 20px;
   font-weight: 600;
@@ -51,22 +47,20 @@ main {
   position: relative;
 }
 
-/* Cart List*/
 .list-cart {
   width: 100%;
-  min-height: 100px; /* Ensures some space even if empty */
+  min-height: 100px;
 }
 
 .list-cart p {
   text-align: center;
-  color: var(--navigation-color);
   font-size: 16px;
 }
 
-/* Individual Cart Item */
 .cart-item {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 20px;
   border-bottom: 1px solid var(--navigation-color);
   padding-bottom: 20px;
@@ -80,7 +74,6 @@ main {
   margin-right: 20px;
 }
 
-/* Cart Content */
 .cart-content {
   flex: 1;
 }
@@ -93,11 +86,9 @@ main {
 
 .cart-content p {
   font-size: 16px;
-  color: var(--navigation-color);
   margin-bottom: 10px;
 }
 
-/* Quantity buttons */
 .quantity-controls {
   display: flex;
   align-items: center;
@@ -125,7 +116,6 @@ main {
   font-size: 16px;
 }
 
-/* Total Price*/
 .total-price {
   text-align: center;
   margin-top: 20px;
@@ -133,13 +123,10 @@ main {
   font-weight: 600;
 }
 
-/* Continue Shopping Button */
-
 .button-container {
   display: flex;
-  gap: 28rem; 
+  justify-content: space-between;
 }
-
 
 .back-to {
   background-color: #fff;
@@ -163,5 +150,103 @@ main {
 }
 
 footer {
-  margin-top: 100px;
+  margin-top: 50px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+  .cart {
+    width: 90%;
+    padding: 15px;
+    margin: 40px auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .cart {
+    padding: 10px;
+    margin: 30px auto;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+  }
+
+  .quantity-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 500px) {
+  .cart {
+    padding: 8px;
+    margin: 20px auto;
+  }
+
+  .cart h2 {
+    font-size: 1.4rem;
+  }
+
+  .cart-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cart-content strong {
+    font-size: 16px;
+  }
+
+  .cart-content p {
+    font-size: 14px;
+  }
+
+  .quantity-controls button {
+    padding: 4px 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cart {
+    padding: 5px;
+    margin: 15px auto;
+  }
+
+  .cart h2 {
+    font-size: 1.2rem;
+  }
+
+  .cart-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cart-content strong {
+    font-size: 14px;
+  }
+
+  .cart-content p {
+    font-size: 12px;
+  }
+
+  .quantity-controls button {
+    padding: 3px 5px;
+  }
+
+  .total-price {
+    font-size: 1rem;
+  }
+
+  .back-to {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
 }
