@@ -1,7 +1,7 @@
 main {
   font-family: var(--primary-font);
-  display: flex; /* Flexbox for centering */
-  justify-content: center; /* Center horizontally */
+  display: flex;
+  justify-content: center;
   align-items: center;
   padding-top: 0;
   padding-bottom: 3.75rem;
@@ -74,3 +74,73 @@ textarea {
 .contact-image img {
   width: 80%;
 }
+
+
+
+@media (max-width: 600px) {
+  .contact-section {
+    flex-direction: column;
+    width: 90%; 
+    margin: 0 auto;
+  }
+
+  .contact-form {
+    width: 100%; 
+    padding: 2rem;
+  }
+
+  .contact-image {
+    width: 100%;
+  }
+
+  .send-button {
+    width: 100%; 
+    padding: 1rem;
+  }
+
+  input,
+textarea {
+  width: 50%;
+}
+
+.send-button {
+  width: 50%;
+}
+}
+
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  .contact-section {
+    width: 80%; 
+  }
+
+  .contact-form {
+    width: 50%;
+    padding: 3rem;
+  }
+
+  .contact-image {
+    width: 50%;
+  }
+
+  .send-button {
+    width: 60%;
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .contact-section {
+    width: 43.75rem;
+  }
+
+  .contact-form {
+    width: 50%;
+    padding: 4.6875rem;
+  }
+
+  .contact-image {
+    width: 50%;
+  }
+}
+
