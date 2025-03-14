@@ -8,6 +8,7 @@ function saveCart() {
   localStorage.setItem("listCart", JSON.stringify(listCart));
 }
 
+//How to update the total price and the total quantity was taken from here: https://dev.to/haamid/simple-shopping-cart-with-pure-javascript-1mno
 function updateTotalPrice() {
   let totalPrice = listCart.reduce(
     (sum, product) => sum + product.price * product.quantity,
@@ -16,6 +17,7 @@ function updateTotalPrice() {
   totalPriceHTML.innerText = `Total: ${totalPrice} SEK`;
 }
 
+  //the code below (for both addToCartHTML and changeQuantity functions) was modified from here: https://www.youtube.com/watch?v=2SbhlPiC5SY&ab_channel=LunDev
 function addCartToHTML() {
   if (!listCartHTML) return;
   listCartHTML.innerHTML = "";
@@ -47,16 +49,18 @@ function addCartToHTML() {
   attachCartEventListeners();
 }
 
+// Change quantity (increase or decrease)
 function changeQuantity(index, type) {
+  let product = listCart[index];
   if (type === "+") {
-    listCart[index].quantity++;
-  } else if (type === "-") {
-    listCart[index].quantity--;
-    if (listCart[index].quantity <= 0) {
-      listCart.splice(index, 1);
-    }
+      product.quantity++;
+  } 
+  else if (type === "-") {
+      product.quantity--;
+      if (product.quantity <= 0) {
+          listCart.splice(index, 1);
+      }
   }
-
   saveCart();
   addCartToHTML();
 }

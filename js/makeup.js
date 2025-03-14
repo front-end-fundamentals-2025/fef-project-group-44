@@ -162,6 +162,7 @@ priceRange.addEventListener("input", function () {
   filterProducts();
 });
 
+// Idea to use change was taken from here: https://www.w3schools.com/jsref/event_onchange.asp
 // Is triggered when the checkbox is changed
 eyes.addEventListener("change", filterProducts);
 face.addEventListener("change", filterProducts);
@@ -201,6 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cartCount.style.display = totalQuantity > 0 ? "block" : "none";
   }
 
+  //the following code was modified from here: https://www.youtube.com/watch?v=2SbhlPiC5SY&ab_channel=LunDev
   // Add cart items to the cart popup
   function addCartToHTML() {
     listCartHTML.innerHTML = "";
@@ -230,17 +232,17 @@ document.addEventListener("DOMContentLoaded", () => {
     attachCartEventListeners();
   }
 
-  // Change quantity (increase or decrease)
+  // Change quantity
   function changeQuantity(index, type) {
+    let product = listCart[index];
     if (type === "+") {
-      listCart[index].quantity++;
+      product.quantity++;
     } else if (type === "-") {
-      listCart[index].quantity--;
-      if (listCart[index].quantity <= 0) {
+      product.quantity--;
+      if (product.quantity <= 0) {
         listCart.splice(index, 1);
       }
     }
-
     saveCart();
     addCartToHTML();
   }
@@ -271,7 +273,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Add to cart event (on "Add to Cart" button click)
+  // Add to cart event
   document.querySelectorAll(".add-to-cart").forEach((button) => {
     button.addEventListener("click", function () {
       let productElement = this.closest(".product");

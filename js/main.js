@@ -10,12 +10,10 @@ marquee.addEventListener("mouseleave", function () {
 });
 
 // Navigation icons scaling
-
+document.addEventListener("DOMContentLoaded", function () {
 const navigationElements = document.getElementsByClassName(
   "navigation-user-options"
 );
-
-const socialElements = document.getElementsByClassName("social-links");
 
 // Loop through the navigation menus (in case there's more than one like now)
 for (let i = 0; i < navigationElements.length; i++) {
@@ -34,6 +32,7 @@ for (let i = 0; i < navigationElements.length; i++) {
     });
   }
 }
+});
 
 // Search Bar
 const searchIcon = document.querySelector(".search-icon");
@@ -81,6 +80,7 @@ document.addEventListener("click", function (event) {
 });
 
 // Social media icons scaling
+const socialElements = document.getElementsByClassName("social-links");
 
 for (let i = 0; i < socialElements.length; i++) {
   // Get all icons inside the current navigation menu
