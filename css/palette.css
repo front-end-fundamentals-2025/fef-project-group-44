@@ -7,26 +7,22 @@ main {
   max-width: 1200px;
 }
 
-/* Product Section */
-
 .product-section {
   display: flex;
-  align-items: flex-start; /* Aligns both image and text at the top */
-  justify-content: center; /* Centers the whole section */
+  align-items: flex-start;
+  justify-content: center;
   gap: 3.5rem;
   max-width: 1200px;
   margin-left: 20rem;
 }
 
-/* Image container */
 .product-img-container {
   width: 100%;
   max-width: 500px;
   display: flex;
-  justify-content: flex-start; /* Aligns image properly */
+  justify-content: flex-start;
 }
 
-/* Image */
 .product-img-container img {
   width: 100%;
   height: auto;
@@ -34,14 +30,13 @@ main {
   border-radius: 5px;
 }
 
-/* Text container */
 .product-info-container {
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
-  position: relative; /* Prevents overlapping */
+  position: relative;
 }
 
 .product-info-container p {
@@ -49,40 +44,25 @@ main {
   margin-bottom: 0;
 }
 
-/* Title aligns with the image */
 .product-info-container h1 {
   margin-top: 0;
 }
 
-@media (max-width: 900px) {
-  .product-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .product-img-container,
-  .product-info-container {
-    width: 100%;
-  }
-}
-
-/* Image container */
 .product-img-container {
   position: relative;
-  display: inline-block; 
+  display: inline-block;
 }
 
 .product-img-container img {
   display: block;
-  width: 100%; 
+  width: 100%;
 }
 
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: var(--primary-color); 
+  background-color: var(--primary-color);
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -98,7 +78,7 @@ main {
 }
 
 .arrow:hover {
-  background-color: var(--decoration-color); 
+  background-color: var(--decoration-color);
   opacity: 1;
 }
 
@@ -110,8 +90,6 @@ main {
   right: 10px;
 }
 
-/* Title & Price */
-
 .product-title p {
   font-size: 1.8rem;
   margin: 0;
@@ -122,21 +100,21 @@ main {
   color: var(--decoration-color);
 }
 
-/* Description */
 .product-description {
   line-height: 1.5;
   text-align: justify;
 }
 
-/* Shade Options */
 .shade-options {
   margin-bottom: 0;
 }
+
 .shade-options h3 {
   font-size: 1.1rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
+
 .shade-options ul {
   list-style: none;
   display: flex;
@@ -159,11 +137,11 @@ main {
   color: #fff;
 }
 
-/* Buttons */
 .product-buttons {
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
+
 .product-buttons button {
   font-family: var(--primary-font);
   background-color: var(--decoration-color);
@@ -175,13 +153,13 @@ main {
   margin-right: 0.5rem;
   transition: background-color 0.4s ease-in-out;
 }
+
 .product-buttons button:hover {
   background-color: #fbdcec;
   color: var(--navigation-color);
   border: 0.5px solid var(--navigation-color);
 }
 
-/* Ingredients Dropdown */
 .ingredients-dropdown {
   margin-top: 0.8rem;
   border-top: 1px solid #eee;
@@ -208,7 +186,7 @@ main {
 }
 
 .plus-button:hover {
-  background-color: var(--decoration-color);;
+  background-color: var(--decoration-color);
   color: #fff;
   border: none;
   font-size: 1.2rem;
@@ -220,12 +198,10 @@ main {
   transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hide the content */
 .hidden {
   display: none;
 }
 
-/* Shipping Info */
 .shipping-info {
   margin-top: 1.5rem;
   margin-bottom: 6rem;
@@ -238,9 +214,61 @@ main {
   gap: 1rem;
   padding-left: 0;
 }
+
 .shipping-info li {
   background-color: #f7f7f7;
   border-radius: 4px;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .product-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-img-container,
+  .product-info-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-section {
+    margin-left: 0;
+    gap: 1.5rem;
+  }
+
+  .product-img-container,
+  .product-info-container {
+    width: 100%;
+  }
+
+  .product-info-container {
+    text-align: center;
+  }
+
+  .arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+
+  .product-title p {
+    font-size: 1.5rem;
+  }
+
+  .product-price {
+    font-size: 0.9rem;
+  }
+
+  .shade-options ul {
+    justify-content: center;
+  }
+
+  .shipping-info ul {
+    flex-direction: column;
+  }
 }
