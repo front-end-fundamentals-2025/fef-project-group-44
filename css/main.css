@@ -8,7 +8,7 @@
   --primary-font: "Poppins", serif;
 }
 
-/*The way to create a marquee and modfy it in CSS was learnt from this video: https://www.youtube.com/watch?v=hOkPZOEIAh4&ab_channel=RyanWebTech*/
+/*The way to create a marquee and modify it in CSS was learnt from this video: https://www.youtube.com/watch?v=hOkPZOEIAh4&ab_channel=RyanWebTech*/
 /* Marquee Scrolling Text */
 .marquee-container {
   width: 100%;
@@ -28,7 +28,6 @@
   width: 80%;
   animation: marquee 27s linear infinite;
   display: inline-flex;
-  /* Each copy of the marquee text takes up 50% */
   gap: 20rem;
   margin: 0;
   padding: 0;
@@ -119,7 +118,7 @@ a {
 }
 
 .navigation-pages {
-  justify-content: center; /* Centers the items horizontally */
+  justify-content: center;
   width: 100%;
 }
 
@@ -177,7 +176,7 @@ a {
 }
 
 .search-icon:hover {
-  background-color: #ff4f7c;
+  background-color: var(--decoration-color-darker);
 }
 
 #main-img {
@@ -294,7 +293,7 @@ figcaption {
 
 .countdown-container p {
   display: flex;
-  flex-direction: column; /* Stack number and text vertically */
+  flex-direction: column;
   align-items: center;
   background: white;
   padding: 10px;
@@ -412,7 +411,7 @@ ul {
 }
 
 .footer-col ul li a {
-  display: inline-block; /* Ensure it's transformable */
+  display: inline-block; 
   transition: transform 0.3s ease;
 }
 
@@ -461,7 +460,7 @@ ul {
   font-weight: 600;
 }
 
-/* General Responsive Adjustments */
+
 @media screen and (max-width: 1024px) {
   .marquee {
     width: 100%;
