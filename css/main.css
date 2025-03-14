@@ -46,7 +46,7 @@
 
 @media screen and (max-width: 1280px) {
   .marquee__group {
-    gap: 4rem; 
+    gap: 4rem;
   }
   .marquee {
     width: 100%;
@@ -117,7 +117,6 @@ a {
 .navigation-user-options {
   font-size: 1.3rem;
 }
-
 
 .navigation-pages {
   justify-content: center; /* Centers the items horizontally */
@@ -249,6 +248,21 @@ figcaption {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .marquee {
+    width: 100%;
+    animation-duration: 22s;
+  }
+
+  .navigation-pages {
+    gap: 15px;
+  }
+
+  .product-section-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -445,4 +459,119 @@ ul {
   text-align: center;
   font-size: 0.6rem;
   font-weight: 600;
+}
+
+/* General Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+  .marquee {
+    width: 100%;
+    animation-duration: 22s;
+  }
+
+  .navigation-pages {
+    gap: 15px;
+  }
+
+  .product-section-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #logo-img {
+    width: 10%;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navigation-pages {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .navigation-user-options {
+    font-size: 1rem;
+  }
+
+  .product-section-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .sale-banner {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .countdown-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .countdown-container p {
+    width: 60px;
+    font-size: 1rem;
+  }
+
+  .progress-bar {
+    width: 90%;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .footer-navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-col {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo-name {
+    font-size: 1.5rem;
+  }
+
+  #logo-img {
+    width: 15%;
+  }
+
+  .search-icon {
+    font-size: 0.8rem;
+    padding: 4px;
+  }
+
+  .sale-banner {
+    font-size: 0.9rem;
+  }
+
+  .countdown-container p {
+    width: 50px;
+    font-size: 0.8rem;
+  }
+
+  .footer-col h4 {
+    font-size: 1rem;
+  }
+
+  .social-links {
+    font-size: 1.5rem;
+  }
 }

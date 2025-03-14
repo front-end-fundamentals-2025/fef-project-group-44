@@ -53,7 +53,7 @@ searchIcon.addEventListener("click", function (event) {
   if (searchInput.style.width === "0px" || searchInput.style.width === "") {
     expandSearch(); // Expand if it's collapsed
   } else {
-    collapseSearch(); // Collapse if it's already expanded
+    collapseSearch();
   }
 });
 
@@ -70,8 +70,8 @@ document.addEventListener("click", function (event) {
 
 // Search Bar Functionality
 
-// The way how to make working search bar was learnt from this video: https://www.youtube.com/watch?v=ifi6dXOl3g4&list=LL&index=5&t=299s&ab_channel=Treehouse
 const nameSearch = document.getElementById("nameSearch");
+// The way how to make working search bar was learnt from this video: https://www.youtube.com/watch?v=ifi6dXOl3g4&list=LL&index=5&t=299s&ab_channel=Treehouse
 nameSearch.addEventListener("keyup", (e) => {
   let currentValue = e.target.value.toLowerCase();
   let names = document.querySelectorAll("p.product-name");

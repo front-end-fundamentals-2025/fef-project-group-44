@@ -58,6 +58,7 @@ function collapseSearch() {
 
 // When the user clicks the search icon, toggle the search input size
 searchIcon.addEventListener("click", function (event) {
+  // The idea to use "preventDefault" was taken from this link: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
   event.preventDefault(); // Prevent form submission (page reload)
   // The idea to use "stopPropagation" was taken from this link: https://www.w3schools.com/jsref/event_stoppropagation.asp
   event.stopPropagation(); // Prevent the click from collapsing the search input
@@ -71,7 +72,6 @@ searchIcon.addEventListener("click", function (event) {
 
 // When the user clicks outside the search area, collapse the input
 document.addEventListener("click", function (event) {
-  // If the click is not inside the search icon or input, collapse the input
   if (
     !searchIcon.contains(event.target) &&
     !searchInput.contains(event.target)
@@ -101,12 +101,12 @@ for (let i = 0; i < socialElements.length; i++) {
 
 // Countdown timer
 
-// The way how to do the countdown timer was learnt from this video: https://youtu.be/34kbdFLpff8?si=P774Cr5gECMlKMY9
 const Days = document.getElementById("days");
 const Hours = document.getElementById("hours");
 const Minutes = document.getElementById("minutes");
 const Seconds = document.getElementById("seconds");
 
+// The way how to do the countdown timer was learnt from this video: https://youtu.be/34kbdFLpff8?si=P774Cr5gECMlKMY9
 const targetDate = new Date("April 22 , 2025 23:59:59").getTime();
 
 function timer() {
@@ -138,18 +138,30 @@ timer();
 
 // Function to update cart count on all pages
 function updateCartCount() {
-  let cartCount = document.querySelector(".totalQuantity"); // Select the shopping bag counter
-  let listCart = JSON.parse(localStorage.getItem("listCart")) || []; // Get cart data from localStorage
+  let cartCount = document.querySelector(".totalQuantity");
+  let listCart = JSON.parse(localStorage.getItem("listCart")) || [];
 
   // Calculate total quantity
-  let totalQuantity = listCart.reduce((sum, product) => sum + product.quantity, 0);
+  // Initialize the total quantity to 0
+  let totalQuantity = 0;
+
+  // Loop through each product in the listCart
+  for (let i = 0; i < listCart.length; i++) {
+    // Add the quantity of the current product to totalQuantity
+    totalQuantity += listCart[i].quantity;
+  }
 
   // Update the cart count in the shopping bag icon
   if (cartCount) {
     cartCount.innerText = totalQuantity;
-    cartCount.style.display = totalQuantity > 0 ? "flex" : "none"; // Hide if cart is empty
+    // If the cart has items, show the cart count, otherwise hide it
+    if (totalQuantity > 0) {
+      cartCount.style.display = "flex"; // Show cart count
+    } else {
+      cartCount.style.display = "none"; // Hide cart count if no items
+    }
   }
 }
 
-// Call this function on page load to ensure the cart count is updated
+// Ensuring that the cart count is updated
 document.addEventListener("DOMContentLoaded", updateCartCount);
