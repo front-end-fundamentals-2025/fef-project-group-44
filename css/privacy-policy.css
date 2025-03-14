@@ -84,5 +84,19 @@ img {
   justify-content: center;
 }
 
-  
+/*Responsiveness about-us*/
+@media screen and (max-width: 768px) {
+  .about-us-first-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .our-story-text {
+    width: 100%;
+  }
+}
   
