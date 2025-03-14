@@ -17,7 +17,7 @@ function updateTotalPrice() {
   totalPriceHTML.innerText = `Total: ${totalPrice} SEK`;
 }
 
-  //the code below (for both addToCartHTML and changeQuantity functions) was modified from here: https://www.youtube.com/watch?v=2SbhlPiC5SY&ab_channel=LunDev
+//the code below (for both addToCartHTML and changeQuantity functions) was modified from here: https://www.youtube.com/watch?v=2SbhlPiC5SY&ab_channel=LunDev
 function addCartToHTML() {
   if (!listCartHTML) return;
   listCartHTML.innerHTML = "";
@@ -53,13 +53,12 @@ function addCartToHTML() {
 function changeQuantity(index, type) {
   let product = listCart[index];
   if (type === "+") {
-      product.quantity++;
-  } 
-  else if (type === "-") {
-      product.quantity--;
-      if (product.quantity <= 0) {
-          listCart.splice(index, 1);
-      }
+    product.quantity++;
+  } else if (type === "-") {
+    product.quantity--;
+    if (product.quantity <= 0) {
+      listCart.splice(index, 1);
+    }
   }
   saveCart();
   addCartToHTML();

@@ -1,135 +1,135 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--primary-font);
-    color: var(--navigation-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  color: var(--navigation-color);
 }
 
 body {
-    background-color: var(--secondary-color);
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  background-color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 main {
-    font-family: var(--primary-font); 
-    color: var(--navigation-color); 
-    max-width: 1000px;
-    width: 80%; 
-    padding: 30px;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
-    margin: 50px auto;
+  font-family: var(--primary-font);
+  color: var(--navigation-color);
+  max-width: 1000px;
+  width: 80%;
+  padding: 30px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  margin: 50px auto;
 }
 
 header {
-    background-color: #fff;
-    padding-bottom: 20px;
+  background-color: #fff;
+  padding-bottom: 20px;
 }
 
 h2 {
-    text-align: center;
-    font-size: 1.7rem;
+  text-align: center;
+  font-size: 1.7rem;
 }
 
 h3 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 500;
 }
 
 .checkout-container {
-    text-align: center;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: 10% auto; /* Centers the section horizontally and places it nicely */
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 10% auto; /* Centers the section horizontally and places it nicely */
 }
 
 .return-button {
-    display: block;
-    width: fit-content;
-    margin: 20px auto; /* Centers the button */
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  display: block;
+  width: fit-content;
+  margin: 20px auto; /* Centers the button */
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .return-button:hover {
-    background-color: var(--decoration-color);
+  background-color: var(--decoration-color);
 }
 
 .details {
-    font-family: var(--primary-font);
-    font-weight: 500;
-    line-height: 1.8;
-    color: var(--navigation-color);
-  }
+  font-family: var(--primary-font);
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--navigation-color);
+}
 
-  /* Responsiveness */
+/* Responsiveness */
 
 /* Mobile Devices */
 @media (max-width: 600px) {
-    main {
-        width: 90%;
-        padding: 20px; 
-    }
+  main {
+    width: 90%;
+    padding: 20px;
+  }
 
-    .checkout-container {
-        width: 90%; 
-        padding: 20px; 
-    }
+  .checkout-container {
+    width: 90%;
+    padding: 20px;
+  }
 
-    .return-button {
-        width: 100%;  
-        padding: 12px 0; 
-}
+  .return-button {
+    width: 100%;
+    padding: 12px 0;
+  }
 }
 
 /* Medium Devices */
 @media (min-width: 600px) and (max-width: 1000px) {
-    main {
-        width: 80%; 
-        padding: 25px; 
-    }
+  main {
+    width: 80%;
+    padding: 25px;
+  }
 
-    .checkout-container {
-        width: 80%;
-        padding: 25px; 
-    }
+  .checkout-container {
+    width: 80%;
+    padding: 25px;
+  }
 
-    .return-button {
-        padding: 10px 25px;
-    }
+  .return-button {
+    padding: 10px 25px;
+  }
 }
 
 /* Large Devices*/
 @media (min-width: 1000px) {
-    main {
-        width: 80%; 
-        padding: 30px; 
-    }
+  main {
+    width: 80%;
+    padding: 30px;
+  }
 
-    .checkout-container {
-        width: 50%; 
-        padding: 30px; 
-    }
+  .checkout-container {
+    width: 50%;
+    padding: 30px;
+  }
 
-    .return-button {
-        padding: 10px 30px; 
-    }
+  .return-button {
+    padding: 10px 30px;
+  }
 }

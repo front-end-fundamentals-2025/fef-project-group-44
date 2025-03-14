@@ -75,17 +75,15 @@ textarea {
   width: 80%;
 }
 
-
-
 @media (max-width: 600px) {
   .contact-section {
     flex-direction: column;
-    width: 90%; 
+    width: 90%;
     margin: 0 auto;
   }
 
   .contact-form {
-    width: 100%; 
+    width: 100%;
     padding: 2rem;
   }
 
@@ -94,24 +92,23 @@ textarea {
   }
 
   .send-button {
-    width: 100%; 
+    width: 100%;
     padding: 1rem;
   }
 
   input,
-textarea {
-  width: 50%;
-}
+  textarea {
+    width: 50%;
+  }
 
-.send-button {
-  width: 50%;
+  .send-button {
+    width: 50%;
+  }
 }
-}
-
 
 @media (min-width: 600px) and (max-width: 1000px) {
   .contact-section {
-    width: 80%; 
+    width: 80%;
   }
 
   .contact-form {
@@ -128,7 +125,6 @@ textarea {
   }
 }
 
-
 @media (min-width: 1000px) {
   .contact-section {
     width: 43.75rem;
@@ -143,4 +139,3 @@ textarea {
     width: 50%;
   }
 }
-

@@ -1,89 +1,88 @@
 [
-    {
-      "id": "1",
-      "name": "Peripera All Take Mood Palette",
-      "price": 160,
-      "image": "img/makeup/peripera-palette.jpg",
-      "category": "eyes"
-    },
-    {
-      "id": "2",
-      "name": "ETUDE Fixing Long-lasting Tint",
-      "price": 135,
-      "image": "img/makeup/etude-tint.jpg",
-      "category": "lips"
-    },
-    {      
-      "id": "3",
-      "name": "Kaja Bento Eyeshadow Trio",
-      "image": "img/makeup/kaja-eye.jpg",
-      "category": "eyes",
-      "stock": "in-stock",
-      "brand": "Kaja Beauty",
-      "price": 220
-    },
-    {
-      "id": "4",
-      "name": "Peripera Ink Velvet Tint",
-      "image": "img/makeup/peripera-lips.jpg",
-      "category": "lips",
-      "stock": "out-of-stock",
-      "brand": "Peripera",
-      "price": 127
-    },
-    {
-      "id": "5",
-      "name": "ETUDE Curl Fix Mascara",
-      "image": "img/makeup/etude-mascara.jpg",
-      "category": "eyes",
-      "stock": "out-of-stock",
-      "brand": "ETUDE",
-      "price": 260
-    },
-    {
-      "id": "6",
-      "name": "Kaja Cheeky Stamp Blendable Blush",
-      "image": "img/makeup/kaja-cheeks.jpeg",
-      "category": "face",
-      "stock": "in-stock",
-      "brand": "Kaja Beauty",
-      "price": 246
-    },
-    {
-      "id": "7",
-      "name": "rom&nd Glasting Melting Balm",
-      "image": "img/makeup/rom-lips.jpeg",
-      "category": "lips",
-      "stock": "in-stock",
-      "brand": "rom&nd",
-      "price": 140
-    },
-    {
-      "id": "8",
-      "name": "hince Second Skin Glow Cushion",
-      "image": "img/makeup/hince-cush.jpg",
-      "category": "face",
-      "stock": "out-of-stock",
-      "brand": "hince",
-      "price": 300
-    },
-    {
-      "id": "9",
-      "name": "Peripera Sugar Twinkle Duo Eye Stick",
-      "image": "img/makeup/peripera-stick.jpg",
-      "category": "eyes",
-      "stock": "out-of-stock",
-      "brand": "Peripera",
-      "price": 258
-    },
-    {
-      "id": "10",
-      "name": "hince True Dimension Glow Cheek",
-      "image": "img/makeup/hince-blush.jpg",
-      "category": "face",
-      "stock": "in-stock",
-      "brand": "hince",
-      "price": 230
-    }
+  {
+    "id": "1",
+    "name": "Peripera All Take Mood Palette",
+    "price": 160,
+    "image": "img/makeup/peripera-palette.jpg",
+    "category": "eyes"
+  },
+  {
+    "id": "2",
+    "name": "ETUDE Fixing Long-lasting Tint",
+    "price": 135,
+    "image": "img/makeup/etude-tint.jpg",
+    "category": "lips"
+  },
+  {
+    "id": "3",
+    "name": "Kaja Bento Eyeshadow Trio",
+    "image": "img/makeup/kaja-eye.jpg",
+    "category": "eyes",
+    "stock": "in-stock",
+    "brand": "Kaja Beauty",
+    "price": 220
+  },
+  {
+    "id": "4",
+    "name": "Peripera Ink Velvet Tint",
+    "image": "img/makeup/peripera-lips.jpg",
+    "category": "lips",
+    "stock": "out-of-stock",
+    "brand": "Peripera",
+    "price": 127
+  },
+  {
+    "id": "5",
+    "name": "ETUDE Curl Fix Mascara",
+    "image": "img/makeup/etude-mascara.jpg",
+    "category": "eyes",
+    "stock": "out-of-stock",
+    "brand": "ETUDE",
+    "price": 260
+  },
+  {
+    "id": "6",
+    "name": "Kaja Cheeky Stamp Blendable Blush",
+    "image": "img/makeup/kaja-cheeks.jpeg",
+    "category": "face",
+    "stock": "in-stock",
+    "brand": "Kaja Beauty",
+    "price": 246
+  },
+  {
+    "id": "7",
+    "name": "rom&nd Glasting Melting Balm",
+    "image": "img/makeup/rom-lips.jpeg",
+    "category": "lips",
+    "stock": "in-stock",
+    "brand": "rom&nd",
+    "price": 140
+  },
+  {
+    "id": "8",
+    "name": "hince Second Skin Glow Cushion",
+    "image": "img/makeup/hince-cush.jpg",
+    "category": "face",
+    "stock": "out-of-stock",
+    "brand": "hince",
+    "price": 300
+  },
+  {
+    "id": "9",
+    "name": "Peripera Sugar Twinkle Duo Eye Stick",
+    "image": "img/makeup/peripera-stick.jpg",
+    "category": "eyes",
+    "stock": "out-of-stock",
+    "brand": "Peripera",
+    "price": 258
+  },
+  {
+    "id": "10",
+    "name": "hince True Dimension Glow Cheek",
+    "image": "img/makeup/hince-blush.jpg",
+    "category": "face",
+    "stock": "in-stock",
+    "brand": "hince",
+    "price": 230
+  }
 ]
-  

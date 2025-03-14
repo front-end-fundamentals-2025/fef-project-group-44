@@ -1,133 +1,133 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--primary-font);
-    color: var(--navigation-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  color: var(--navigation-color);
 }
 
 body {
-    background-color: var(--secondary-color);
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  background-color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 main {
-    font-family: var(--primary-font); 
-    color: var(--navigation-color); 
-    max-width: 1000px;
-    width: 80%; 
-    padding: 30px;
-    background-color: #fff; 
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
-    margin: 50px auto;
+  font-family: var(--primary-font);
+  color: var(--navigation-color);
+  max-width: 1000px;
+  width: 80%;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  margin: 50px auto;
 }
 
 .login-container {
-    background: var(--secondary-color);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
-    margin: auto;
+  background: var(--secondary-color);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  margin: auto;
 }
 
 header {
-    background-color: #fff;
-    padding-bottom: 20px;
+  background-color: #fff;
+  padding-bottom: 20px;
 }
 
 h2 {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .input-group {
-    position: relative;
-    margin: 10px 0;
+  position: relative;
+  margin: 10px 0;
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    padding-left: 35px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  padding-left: 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .icon {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .login-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--navigation-color);
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--navigation-color);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .login-button:hover {
-    background-color: var(--decoration-color);
+  background-color: var(--decoration-color);
 }
 
 .social-login-text {
-    margin: 15px 0;
-    font-size: 0.9em;
-    color: var(--navigation-color);
+  margin: 15px 0;
+  font-size: 0.9em;
+  color: var(--navigation-color);
 }
 
 .login-social-links a {
-    color: var(--navigation-color); 
-    text-decoration: none; 
-    display: inline-block; 
-    align-items: center;
-    justify-content: center;
-    width: 40px; 
-    height: 40px;
-    border-radius: 50%; 
-    transition: color 0.3s ease, background-color 0.3s ease;
+  color: var(--navigation-color);
+  text-decoration: none;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.login-social-links a i { 
-    transition: color 0.3s ease;
+.login-social-links a i {
+  transition: color 0.3s ease;
 }
 
 .login-social-links a:hover i {
-    color: var(--decoration-color); 
+  color: var(--decoration-color);
 }
 
 .details {
-    font-family: var(--primary-font);
-    font-weight: 500;
-    line-height: 1.8;
-    color: var(--navigation-color);
-  }
+  font-family: var(--primary-font);
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--navigation-color);
+}
 
 /* Responsiveness */
 
 @media (max-width: 400px) {
-    .login-container {
-        width: 90%; 
-        padding: 15px;
-    }
+  .login-container {
+    width: 90%;
+    padding: 15px;
+  }
 }
 
 @media (max-width: 768px) {
-    main {
-        width: 90%; 
-        padding: 20px;
-    }
+  main {
+    width: 90%;
+    padding: 20px;
+  }
 }
