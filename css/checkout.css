@@ -79,3 +79,57 @@ h3 {
     line-height: 1.8;
     color: var(--navigation-color);
   }
+
+  /* Responsiveness */
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    main {
+        width: 90%;
+        padding: 20px; 
+    }
+
+    .checkout-container {
+        width: 90%; 
+        padding: 20px; 
+    }
+
+    .return-button {
+        width: 100%;  
+        padding: 12px 0; 
+}
+}
+
+/* Medium Devices */
+@media (min-width: 600px) and (max-width: 1000px) {
+    main {
+        width: 80%; 
+        padding: 25px; 
+    }
+
+    .checkout-container {
+        width: 80%;
+        padding: 25px; 
+    }
+
+    .return-button {
+        padding: 10px 25px;
+    }
+}
+
+/* Large Devices*/
+@media (min-width: 1000px) {
+    main {
+        width: 80%; 
+        padding: 30px; 
+    }
+
+    .checkout-container {
+        width: 50%; 
+        padding: 30px; 
+    }
+
+    .return-button {
+        padding: 10px 30px; 
+    }
+}
